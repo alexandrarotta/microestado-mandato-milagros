@@ -1,0 +1,106 @@
+{
+  "defaults": {
+    "tax_elasticity": 0.02,
+    "happiness_tax_penalty": 0.5,
+    "project_cost_multiplier_by_phase": {
+      "1": 1,
+      "2": 1.15,
+      "3": 1.3,
+      "4": 1.5
+    },
+    "offline_cap_hours": 8,
+    "event_frequency": 0.02,
+    "crisis_thresholds": {
+      "happiness": 40,
+      "stability": 40,
+      "trust": 40
+    },
+    "iap_offer_rotation": "starter,boosts,pro",
+    "starter_pack_eligibility": true,
+    "mandate_role_weights": {
+      "PRESIDENT": 0.18,
+      "KING_ABSOLUTE": 0.08,
+      "KING_PARLIAMENT": 0.12,
+      "PRIME_MINISTER": 0.14,
+      "DICTATOR": 0.12,
+      "CHANCELLOR": 0.12,
+      "SUPREME_LEADER": 0.1,
+      "DICTATORSHIP": 0.14
+    },
+    "mandate_traits": [
+      "TECHNOCRAT",
+      "POPULIST",
+      "IDEALIST",
+      "PRAGMATIST",
+      "BUREAUCRAT",
+      "SHOWMAN",
+      "BALANCER"
+    ],
+    "mandate_taglines": [
+      "Prometi orden fiscal y termine negociando hasta el color de las carpetas.",
+      "El plan maestro era simple, la realidad no firmo.",
+      "Traje una hoja de ruta y sali con un mapa de sellos.",
+      "Si el presupuesto habla, yo traduzco con ironia.",
+      "Dicen que la austeridad es una virtud, yo la convierto en lema.",
+      "Negociar era opcional hasta que llego el primer comunicado.",
+      "El gabinete pidio estabilidad, yo traje cafe y paciencia."
+    ]
+  },
+  "keys": [
+    {
+      "key": "tax_elasticity",
+      "type": "number",
+      "description": "Sensibilidad del crecimiento al nivel de impuestos."
+    },
+    {
+      "key": "happiness_tax_penalty",
+      "type": "number",
+      "description": "Penalizacion base de felicidad por impuestos."
+    },
+    {
+      "key": "project_cost_multiplier_by_phase",
+      "type": "object",
+      "description": "Multiplicadores de costo por fase."
+    },
+    {
+      "key": "offline_cap_hours",
+      "type": "number",
+      "description": "Cap de progreso offline."
+    },
+    {
+      "key": "event_frequency",
+      "type": "number",
+      "description": "Probabilidad base de eventos por tick."
+    },
+    {
+      "key": "crisis_thresholds",
+      "type": "object",
+      "description": "Umbrales para crisis macro."
+    },
+    {
+      "key": "iap_offer_rotation",
+      "type": "string",
+      "description": "Rotacion de ofertas."
+    },
+    {
+      "key": "starter_pack_eligibility",
+      "type": "boolean",
+      "description": "Elegibilidad de starter pack."
+    },
+    {
+      "key": "mandate_role_weights",
+      "type": "object",
+      "description": "Pesos para rol aleatorio en mandato." 
+    },
+    {
+      "key": "mandate_traits",
+      "type": "array",
+      "description": "Lista de rasgos disponibles para mandato." 
+    },
+    {
+      "key": "mandate_taglines",
+      "type": "array",
+      "description": "Taglines satiricos para mandato." 
+    }
+  ]
+}

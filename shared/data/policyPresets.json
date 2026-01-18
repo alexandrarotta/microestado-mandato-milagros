@@ -1,0 +1,62 @@
+[
+  {
+    "id": "GROWTH",
+    "name": "Crecimiento",
+    "description": "Plan de siglas y obras relampago.",
+    "budget": { "industryPct": 45, "welfarePct": 25, "securityDiplomacyPct": 30 },
+    "adjustments": {
+      "gdp": 150,
+      "innovation": 8,
+      "environmentalImpact": 4,
+      "inequality": 4,
+      "happiness": -3
+    }
+  },
+  {
+    "id": "WELFARE",
+    "name": "Bienestar",
+    "description": "Mas redes y mas promesas que planillas.",
+    "budget": { "industryPct": 25, "welfarePct": 50, "securityDiplomacyPct": 25 },
+    "adjustments": {
+      "happiness": 8,
+      "inequality": -6,
+      "treasury": -100,
+      "gdp": -50
+    }
+  },
+  {
+    "id": "ORDER",
+    "name": "Orden",
+    "description": "Reglas claras, comunicados largos.",
+    "budget": { "industryPct": 30, "welfarePct": 25, "securityDiplomacyPct": 45 },
+    "adjustments": {
+      "stability": 8,
+      "institutionalTrust": 4,
+      "happiness": -2,
+      "reputation": -2
+    }
+  },
+  {
+    "id": "REPUTATION",
+    "name": "Reputacion",
+    "description": "Viajes, convenios y fotos con tazas pequenias.",
+    "budget": { "industryPct": 30, "welfarePct": 35, "securityDiplomacyPct": 35 },
+    "adjustments": {
+      "reputation": 8,
+      "environmentalImpact": -5,
+      "gdp": 20
+    }
+  },
+  {
+    "id": "AUTOSUFFICIENCY",
+    "name": "Autosuficiencia",
+    "description": "Todo local, aunque salga con rebaja.",
+    "budget": { "industryPct": 40, "welfarePct": 30, "securityDiplomacyPct": 30 },
+    "adjustments": {
+      "resources": 20,
+      "energy": 6,
+      "innovation": 2,
+      "reputation": -4
+    }
+  }
+]

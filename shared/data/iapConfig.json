@@ -1,0 +1,66 @@
+{
+  "currency": {
+    "id": "SPECIAL_DECREES",
+    "name": "Decretos Especiales"
+  },
+  "offers": [
+    {
+      "id": "PACK_STARTER",
+      "name": "Paquete Inicial",
+      "price": "USD 1.99",
+      "tokens": 4,
+      "label": "Arranque rapido"
+    },
+    {
+      "id": "PACK_STANDARD",
+      "name": "Paquete Gabinete",
+      "price": "USD 4.99",
+      "tokens": 12,
+      "label": "Planilla extra"
+    },
+    {
+      "id": "PACK_MAX",
+      "name": "Paquete Protocolo",
+      "price": "USD 9.99",
+      "tokens": 28,
+      "label": "Carpetas infinitas"
+    },
+    {
+      "id": "PACK_WEEKLY",
+      "name": "Pase Semanal",
+      "price": "USD 2.99",
+      "tokens": 8,
+      "label": "Sello semanal"
+    }
+  ],
+  "actions": {
+    "projectSpeedCost": 1,
+    "eventMitigationCost": 1,
+    "offlineCapBoostCost": 2,
+    "offlineCapBoostHours": 4,
+    "autoBalanceUnlockCost": 2,
+    "reportClarityUnlockCost": 1,
+    "carbonCreditsCost": 2,
+    "carbonCreditsReduction": 15
+  },
+  "rewardedAds": [
+    {
+      "id": "DOUBLE_OFFLINE",
+      "name": "Doble recaudacion offline",
+      "description": "Duplica el resultado del ultimo regreso.",
+      "effect": { "offlineIncomeBonus": 1.0 }
+    },
+    {
+      "id": "TRUST_CAMPAIGN",
+      "name": "Campana de confianza",
+      "description": "Pequeno boost de confianza institucional.",
+      "effect": { "institutionalTrust": 2, "happiness": 1 }
+    },
+    {
+      "id": "EXPRESS_AUDIT",
+      "name": "Auditoria expres",
+      "description": "Baja corrupcion temporalmente.",
+      "effect": { "corruption": -3 }
+    }
+  ]
+}

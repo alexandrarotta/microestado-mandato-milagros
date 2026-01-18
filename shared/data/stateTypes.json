@@ -1,0 +1,47 @@
+[
+  {
+    "id": "NONE",
+    "label": "(Sin especificar)",
+    "prefix": ""
+  },
+  {
+    "id": "REPUBLIC",
+    "label": "Republica",
+    "prefix": "Republica de "
+  },
+  {
+    "id": "KINGDOM",
+    "label": "Reino",
+    "prefix": "Reino de "
+  },
+  {
+    "id": "COMMONWEALTH",
+    "label": "Commonwealth",
+    "prefix": "Commonwealth de "
+  },
+  {
+    "id": "CITY_STATE",
+    "label": "Ciudad-Estado",
+    "prefix": "Ciudad-Estado de "
+  },
+  {
+    "id": "COUNCIL",
+    "label": "Consejo Estatal",
+    "prefix": "Consejo Estatal de "
+  },
+  {
+    "id": "ARCHIPELAGO",
+    "label": "Archipielago",
+    "prefix": "Archipielago de "
+  },
+  {
+    "id": "FREE_STATE",
+    "label": "Estado Libre",
+    "prefix": "Estado Libre de "
+  },
+  {
+    "id": "OTHER",
+    "label": "Otro (especificar)",
+    "prefix": ""
+  }
+]

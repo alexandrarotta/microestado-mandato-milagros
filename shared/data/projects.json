@@ -1,0 +1,500 @@
+[
+  {
+    "id": "P1_CENSUS",
+    "name": "Censo nacional mas o menos",
+    "description": "Contar poblacion con regla y optimismo.",
+    "phase": 1,
+    "cost": 80,
+    "durationTicks": 10,
+    "requirements": {},
+    "effects": {
+      "institutionalTrust": 2,
+      "innovation": 2
+    },
+    "valueScore": 22
+  },
+  {
+    "id": "P1_TAX_SIMPLIFY",
+    "name": "Impuesto simplificado",
+    "description": "Tres formularios menos y cinco sellos nuevos.",
+    "phase": 1,
+    "cost": 110,
+    "durationTicks": 12,
+    "requirements": {},
+    "effects": {
+      "institutionalTrust": 2,
+      "corruption": -2,
+      "gdp": 40
+    },
+    "valueScore": 30
+  },
+  {
+    "id": "P1_BUSINESS_REGISTRY",
+    "name": "Registro de empresas",
+    "description": "Un registro serio para emprendimientos creativos.",
+    "phase": 1,
+    "cost": 120,
+    "durationTicks": 12,
+    "requirements": {},
+    "effects": {
+      "gdp": 70,
+      "employment": 2,
+      "corruption": 1
+    },
+    "valueScore": 22
+  },
+  {
+    "id": "P1_BASIC_GRID",
+    "name": "Red electrica basica",
+    "description": "Luz estable, excusas inestables.",
+    "phase": 1,
+    "cost": 140,
+    "durationTicks": 14,
+    "requirements": {},
+    "effects": {
+      "energy": 8,
+      "environmentalImpact": 2,
+      "stability": 1
+    },
+    "valueScore": 22
+  },
+  {
+    "id": "P1_MAIN_ROAD",
+    "name": "Carretera principal",
+    "description": "Unir capital con el resto del mapa.",
+    "phase": 1,
+    "cost": 150,
+    "durationTicks": 15,
+    "requirements": {},
+    "effects": {
+      "gdp": 80,
+      "stability": 2,
+      "environmentalImpact": 1
+    },
+    "valueScore": 28
+  },
+  {
+    "id": "P1_EMERGENCY_HOSPITAL",
+    "name": "Hospital de urgencias",
+    "description": "Salud rapida y pasillos ordenados.",
+    "phase": 1,
+    "cost": 130,
+    "durationTicks": 13,
+    "requirements": {},
+    "effects": {
+      "happiness": 4,
+      "stability": 1,
+      "employment": 1
+    },
+    "valueScore": 28
+  },
+  {
+    "id": "P1_MANDATORY_SCHOOL",
+    "name": "Escuela obligatoria",
+    "description": "Formar ciudadanos y futuros burrocratas.",
+    "phase": 1,
+    "cost": 160,
+    "durationTicks": 16,
+    "requirements": {},
+    "effects": {
+      "innovation": 6,
+      "happiness": 2,
+      "employment": 2
+    },
+    "valueScore": 32
+  },
+  {
+    "id": "P1_CUSTOMS",
+    "name": "Aduana funcional",
+    "description": "Sellos ordenados, colas mas cortas.",
+    "phase": 1,
+    "cost": 120,
+    "durationTicks": 12,
+    "requirements": {},
+    "effects": {
+      "gdp": 60,
+      "reputation": 1,
+      "corruption": 1
+    },
+    "valueScore": 19
+  },
+  {
+    "id": "P1_PAPERLESS",
+    "name": "Plan cero papeles (mentira)",
+    "description": "Mas promesas digitales que cables.",
+    "phase": 1,
+    "cost": 100,
+    "durationTicks": 10,
+    "requirements": {},
+    "effects": {
+      "innovation": 3,
+      "institutionalTrust": -1,
+      "corruption": 1
+    },
+    "valueScore": 9
+  },
+  {
+    "id": "P1_ANTIMONOPOLY",
+    "name": "Ley anti-monopolio (simbolica)",
+    "description": "Simbolos fuertes, dientes de plastico.",
+    "phase": 1,
+    "cost": 110,
+    "durationTicks": 11,
+    "requirements": {},
+    "effects": {
+      "inequality": -3,
+      "stability": 2,
+      "gdp": -20
+    },
+    "valueScore": 21
+  },
+  {
+    "id": "P1_TOURISM_SIGNAGE",
+    "name": "Senaletica y rutas",
+    "description": "Rutas claras, fotos faciles.",
+    "phase": 1,
+    "cost": 90,
+    "durationTicks": 10,
+    "requirements": {},
+    "effects": {
+      "tourismIndex": 6,
+      "treasury": -40,
+      "reputation": 1
+    },
+    "valueScore": 20
+  },
+  {
+    "id": "P1_TOURISM_OFFICE",
+    "name": "Oficina de turismo",
+    "description": "Un mostrador, un mapa y muchas promesas.",
+    "phase": 1,
+    "cost": 110,
+    "durationTicks": 12,
+    "requirements": {},
+    "effects": {
+      "tourismIndex": 4,
+      "tourismCapacity": 4,
+      "treasury": -50
+    },
+    "valueScore": 18
+  },
+  {
+    "id": "P2_AUDIT_OFFICE",
+    "name": "Contraloria con dientes",
+    "description": "Revisa todo menos las invitaciones.",
+    "phase": 2,
+    "cost": 180,
+    "durationTicks": 16,
+    "requirements": {
+      "minInstitutionalTrust": 45
+    },
+    "effects": {
+      "corruption": -5,
+      "institutionalTrust": 3,
+      "adminUnlocked": 1
+    },
+    "valueScore": 45
+  },
+  {
+    "id": "P2_PROCUREMENT",
+    "name": "Sistema de compras publicas",
+    "description": "Lista de precios con letra legible.",
+    "phase": 2,
+    "cost": 170,
+    "adminCost": 8,
+    "durationTicks": 15,
+    "requirements": {
+      "minStability": 50
+    },
+    "effects": {
+      "corruption": -3,
+      "stability": 2
+    },
+    "valueScore": 27
+  },
+  {
+    "id": "P2_CENTRAL_BANK",
+    "name": "Banco Central",
+    "description": "Las tasas ahora tienen oficina.",
+    "phase": 2,
+    "cost": 220,
+    "adminCost": 12,
+    "durationTicks": 18,
+    "requirements": {
+      "minInstitutionalTrust": 50
+    },
+    "effects": {
+      "stability": 3,
+      "debt": -40,
+      "growthPct": 0.2
+    },
+    "valueScore": 32
+  },
+  {
+    "id": "P2_TARGETED_SUBSIDY",
+    "name": "Subsidio focalizado",
+    "description": "Ayuda precisa con lista extensa.",
+    "phase": 2,
+    "cost": 160,
+    "adminCost": 6,
+    "durationTicks": 14,
+    "requirements": {},
+    "effects": {
+      "happiness": 4,
+      "inequality": -4,
+      "treasury": -60
+    },
+    "valueScore": 27
+  },
+  {
+    "id": "P2_JOB_TRAINING",
+    "name": "Plan de capacitacion laboral",
+    "description": "Mas herramientas y menos excusas.",
+    "phase": 2,
+    "cost": 180,
+    "adminCost": 8,
+    "durationTicks": 16,
+    "requirements": {
+      "minStability": 50
+    },
+    "effects": {
+      "employment": 6,
+      "innovation": 3
+    },
+    "valueScore": 28
+  },
+  {
+    "id": "P2_INVEST_AGENCY",
+    "name": "Agencia de inversiones",
+    "description": "Brochures, cafe y promesas firmadas.",
+    "phase": 2,
+    "cost": 210,
+    "adminCost": 10,
+    "durationTicks": 17,
+    "requirements": {
+      "minReputation": 40
+    },
+    "effects": {
+      "reputation": 3,
+      "gdp": 90,
+      "agencyPromotion": 1
+    },
+    "valueScore": 39
+  },
+  {
+    "id": "P2_GREEN_TAX",
+    "name": "Impuesto verde",
+    "description": "Cobrar por huella y plantar discursos.",
+    "phase": 2,
+    "cost": 150,
+    "adminCost": 6,
+    "durationTicks": 14,
+    "requirements": {},
+    "effects": {
+      "environmentalImpact": -6,
+      "reputation": 2,
+      "growthPct": -0.2
+    },
+    "valueScore": 22
+  },
+  {
+    "id": "P2_RENTAL_REGULATION",
+    "name": "Norma de arriendos",
+    "description": "Controlar presion turistico-habitacional.",
+    "phase": 2,
+    "cost": 140,
+    "adminCost": 6,
+    "durationTicks": 14,
+    "requirements": {},
+    "effects": {
+      "tourismPressure": -6,
+      "happiness": 2,
+      "gdp": -10
+    },
+    "valueScore": 27
+  },
+  {
+    "id": "P2_TOURISM_CONNECTIVITY",
+    "name": "Transporte y conectividad",
+    "description": "Mas conexiones, menos excusas.",
+    "phase": 2,
+    "cost": 180,
+    "adminCost": 8,
+    "durationTicks": 16,
+    "requirements": {},
+    "effects": {
+      "tourismCapacity": 10,
+      "treasury": -90,
+      "stability": 1
+    },
+    "valueScore": 22
+  },
+  {
+    "id": "P3_AUTOMATED_COLLECTION",
+    "name": "Recaudacion automatica",
+    "description": "La caja cobra sola, la gente se queja igual.",
+    "phase": 3,
+    "cost": 260,
+    "adminCost": 16,
+    "durationTicks": 20,
+    "requirements": {
+      "minInstitutionalTrust": 55
+    },
+    "effects": {
+      "agencyRevenue": 1,
+      "institutionalTrust": 2
+    },
+    "valueScore": 26
+  },
+  {
+    "id": "P3_ENV_INSPECTION",
+    "name": "Inspeccion ambiental",
+    "description": "Planillas verdes con letra roja.",
+    "phase": 3,
+    "cost": 240,
+    "adminCost": 14,
+    "durationTicks": 19,
+    "requirements": {},
+    "effects": {
+      "agencyInspection": 1,
+      "environmentalImpact": -5,
+      "corruption": -1
+    },
+    "valueScore": 29
+  },
+  {
+    "id": "P3_UNEMPLOYMENT_INSURANCE",
+    "name": "Seguro de desempleo",
+    "description": "Red de seguridad y planilla nueva.",
+    "phase": 3,
+    "cost": 260,
+    "adminCost": 12,
+    "durationTicks": 20,
+    "requirements": {},
+    "effects": {
+      "happiness": 3,
+      "inequality": -3,
+      "treasury": -80
+    },
+    "valueScore": 21
+  },
+  {
+    "id": "P3_CRISIS_BUTTON",
+    "name": "Plan anticrisis (boton emergencia)",
+    "description": "Un boton rojo con manual breve.",
+    "phase": 3,
+    "cost": 220,
+    "adminCost": 10,
+    "durationTicks": 18,
+    "requirements": {
+      "minStability": 55
+    },
+    "effects": {
+      "emergencyPlanUnlocked": 1,
+      "stability": 2
+    },
+    "valueScore": 26
+  },
+  {
+    "id": "P3_RADICAL_TRANSPARENCY",
+    "name": "Transparencia radical (con PDF)",
+    "description": "Todo visible, todo pesado.",
+    "phase": 3,
+    "cost": 230,
+    "adminCost": 12,
+    "durationTicks": 19,
+    "requirements": {},
+    "effects": {
+      "corruption": -6,
+      "institutionalTrust": 5,
+      "reputation": 2
+    },
+    "valueScore": 54
+  },
+  {
+    "id": "P3_TOURISM_BRAND",
+    "name": "Marca pais turistica",
+    "description": "Un logo brillante y un slogan pegajoso.",
+    "phase": 3,
+    "cost": 220,
+    "adminCost": 10,
+    "durationTicks": 18,
+    "requirements": {},
+    "effects": {
+      "reputation": 4,
+      "tourismIndex": 8,
+      "treasury": -120
+    },
+    "valueScore": 28
+  },
+  {
+    "id": "P3_GREEN_TOURISM_TAX",
+    "name": "Tasa turistica verde",
+    "description": "Cobrar por huella y sonar sostenible.",
+    "phase": 3,
+    "cost": 200,
+    "adminCost": 8,
+    "durationTicks": 18,
+    "requirements": {},
+    "effects": {
+      "treasury": 30,
+      "environmentalImpact": -2,
+      "happiness": -1
+    },
+    "valueScore": 13
+  },
+  {
+    "id": "P4_TRADE_TREATY",
+    "name": "Tratado comercial",
+    "description": "Firmas, fotos y claps medidos.",
+    "phase": 4,
+    "cost": 400,
+    "adminCost": 20,
+    "durationTicks": 24,
+    "requirements": {
+      "minReputation": 55
+    },
+    "effects": {
+      "treatiesUnlocked": 1,
+      "reputation": 6,
+      "gdp": 160
+    },
+    "valueScore": 64
+  },
+  {
+    "id": "P4_COUNTRY_BRAND",
+    "name": "Marca pais",
+    "description": "Un logo, cuatro slogans y una gira.",
+    "phase": 4,
+    "cost": 360,
+    "adminCost": 18,
+    "durationTicks": 22,
+    "requirements": {
+      "minStability": 60
+    },
+    "effects": {
+      "reputation": 8,
+      "gdp": 120,
+      "happiness": 2
+    },
+    "valueScore": 58
+  },
+  {
+    "id": "P4_INNOVATION_STRATEGY",
+    "name": "Estrategia nacional de innovacion",
+    "description": "Talleres, laboratorios y cafe largo.",
+    "phase": 4,
+    "cost": 420,
+    "adminCost": 22,
+    "durationTicks": 26,
+    "requirements": {
+      "minInnovation": 60
+    },
+    "effects": {
+      "innovation": 12,
+      "growthPct": 0.6,
+      "reputation": 3
+    },
+    "valueScore": 61
+  }
+]

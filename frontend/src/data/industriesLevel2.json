@@ -1,0 +1,290 @@
+[
+  {
+    "id": "L2_AGRO_PRECISION",
+    "name": "Agro precision",
+    "group": "Primario",
+    "description": "Agricultura inteligente con riego y semillas optimizadas.",
+    "tags": ["agro", "food", "rural"],
+    "attributes": {
+      "capex": 4,
+      "opex": 3,
+      "employment": 6,
+      "fiscalIncome": 5,
+      "exports": 4,
+      "envImpact": 3,
+      "energyDemand": 3,
+      "waterDemand": 6,
+      "humanCapitalReq": 4,
+      "risk": 2,
+      "politicalInfluence": 4
+    },
+    "modifiers": {
+      "incomeMult": 1.05,
+      "baseGrowthAddPct": 0.15,
+      "inflationPressureAdd": 0.05,
+      "pollutionAdd": 0.1,
+      "synergyTags": ["food", "rural"]
+    },
+    "unlock": {
+      "minPhaseL2": 1,
+      "requiresProjectsL2": []
+    },
+    "shortImpactText": "Ingresos estables y empleo rural."
+  },
+  {
+    "id": "L2_ADV_MANUFACTURING",
+    "name": "Manufactura avanzada",
+    "group": "Industrial",
+    "description": "Plantas automatizadas con exportacion regional.",
+    "tags": ["industry", "automation", "exports"],
+    "attributes": {
+      "capex": 7,
+      "opex": 6,
+      "employment": 7,
+      "fiscalIncome": 7,
+      "exports": 8,
+      "envImpact": 6,
+      "energyDemand": 7,
+      "waterDemand": 4,
+      "humanCapitalReq": 7,
+      "risk": 5,
+      "politicalInfluence": 6
+    },
+    "modifiers": {
+      "incomeMult": 1.2,
+      "baseGrowthAddPct": 0.3,
+      "inflationPressureAdd": 0.2,
+      "pollutionAdd": 0.4,
+      "synergyTags": ["automation", "exports"]
+    },
+    "unlock": {
+      "minPhaseL2": 2,
+      "requiresProjectsL2": ["L2_TRADE_CORRIDOR"]
+    },
+    "shortImpactText": "Alto crecimiento con presion inflacionaria."
+  },
+  {
+    "id": "L2_DIGITAL_SERVICES",
+    "name": "Servicios digitales",
+    "group": "Servicios",
+    "description": "Hub de software, fintech y servicios remotos.",
+    "tags": ["software", "finance", "services"],
+    "attributes": {
+      "capex": 3,
+      "opex": 5,
+      "employment": 5,
+      "fiscalIncome": 6,
+      "exports": 7,
+      "envImpact": 2,
+      "energyDemand": 4,
+      "waterDemand": 1,
+      "humanCapitalReq": 8,
+      "risk": 4,
+      "politicalInfluence": 6
+    },
+    "modifiers": {
+      "incomeMult": 1.15,
+      "baseGrowthAddPct": 0.25,
+      "inflationPressureAdd": 0.1,
+      "pollutionAdd": 0.05,
+      "synergyTags": ["software", "finance"]
+    },
+    "unlock": {
+      "minPhaseL2": 1,
+      "requiresProjectsL2": ["L2_DIGITAL_GOV"]
+    },
+    "shortImpactText": "Crecimiento rapido con bajo impacto ambiental."
+  },
+  {
+    "id": "L2_RENEWABLE_ENERGY",
+    "name": "Energia renovable",
+    "group": "Energia",
+    "description": "Parques solares y eolicos con red inteligente.",
+    "tags": ["green", "grid", "energy"],
+    "attributes": {
+      "capex": 8,
+      "opex": 4,
+      "employment": 4,
+      "fiscalIncome": 5,
+      "exports": 3,
+      "envImpact": 2,
+      "energyDemand": 2,
+      "waterDemand": 2,
+      "humanCapitalReq": 6,
+      "risk": 3,
+      "politicalInfluence": 5
+    },
+    "modifiers": {
+      "incomeMult": 1.05,
+      "baseGrowthAddPct": 0.2,
+      "inflationPressureAdd": 0,
+      "pollutionAdd": -0.2,
+      "synergyTags": ["green", "grid"]
+    },
+    "unlock": {
+      "minPhaseL2": 1,
+      "requiresProjectsL2": ["L2_GRID_UPGRADE"]
+    },
+    "shortImpactText": "Reduce impacto ambiental y estabiliza costos."
+  },
+  {
+    "id": "L2_BIOTECH_HEALTH",
+    "name": "Biotecnologia medica",
+    "group": "Salud",
+    "description": "Investigacion medica con patentes de alto valor.",
+    "tags": ["health", "research", "science"],
+    "attributes": {
+      "capex": 6,
+      "opex": 6,
+      "employment": 4,
+      "fiscalIncome": 7,
+      "exports": 6,
+      "envImpact": 3,
+      "energyDemand": 4,
+      "waterDemand": 3,
+      "humanCapitalReq": 9,
+      "risk": 5,
+      "politicalInfluence": 5
+    },
+    "modifiers": {
+      "incomeMult": 1.18,
+      "baseGrowthAddPct": 0.22,
+      "inflationPressureAdd": 0.12,
+      "pollutionAdd": 0.1,
+      "synergyTags": ["health", "research"]
+    },
+    "unlock": {
+      "minPhaseL2": 3,
+      "requiresProjectsL2": ["L2_RESEARCH_CLUSTER"]
+    },
+    "shortImpactText": "Altos retornos con alta demanda de talento."
+  },
+  {
+    "id": "L2_LOGISTICS_HUB",
+    "name": "Logistica regional",
+    "group": "Infraestructura",
+    "description": "Corredores logisiticos y puertos secos.",
+    "tags": ["trade", "transport", "infra"],
+    "attributes": {
+      "capex": 5,
+      "opex": 5,
+      "employment": 6,
+      "fiscalIncome": 6,
+      "exports": 5,
+      "envImpact": 4,
+      "energyDemand": 5,
+      "waterDemand": 2,
+      "humanCapitalReq": 5,
+      "risk": 4,
+      "politicalInfluence": 5
+    },
+    "modifiers": {
+      "incomeMult": 1.1,
+      "baseGrowthAddPct": 0.18,
+      "inflationPressureAdd": 0.08,
+      "pollutionAdd": 0.2,
+      "synergyTags": ["trade", "transport"]
+    },
+    "unlock": {
+      "minPhaseL2": 2,
+      "requiresProjectsL2": ["L2_TRADE_CORRIDOR"]
+    },
+    "shortImpactText": "Mejora exportaciones y dinamiza comercio."
+  },
+  {
+    "id": "L2_BLUE_ECONOMY",
+    "name": "Economia azul",
+    "group": "Maritimo",
+    "description": "Pesca sostenible y servicios maritimos avanzados.",
+    "tags": ["ocean", "tourism", "ports"],
+    "attributes": {
+      "capex": 5,
+      "opex": 4,
+      "employment": 5,
+      "fiscalIncome": 5,
+      "exports": 6,
+      "envImpact": 4,
+      "energyDemand": 4,
+      "waterDemand": 5,
+      "humanCapitalReq": 5,
+      "risk": 4,
+      "politicalInfluence": 4
+    },
+    "modifiers": {
+      "incomeMult": 1.08,
+      "baseGrowthAddPct": 0.16,
+      "inflationPressureAdd": 0.07,
+      "pollutionAdd": 0.15,
+      "synergyTags": ["ocean", "tourism"]
+    },
+    "unlock": {
+      "minPhaseL2": 2,
+      "requiresProjectsL2": []
+    },
+    "shortImpactText": "Ingresos mixtos con enfoque costero."
+  },
+  {
+    "id": "L2_DEFENSE_CYBER",
+    "name": "Defensa dual y ciber",
+    "group": "Seguridad",
+    "description": "Industria dual con foco en ciberseguridad.",
+    "tags": ["security", "cyber", "defense"],
+    "attributes": {
+      "capex": 7,
+      "opex": 6,
+      "employment": 4,
+      "fiscalIncome": 6,
+      "exports": 4,
+      "envImpact": 5,
+      "energyDemand": 6,
+      "waterDemand": 2,
+      "humanCapitalReq": 7,
+      "risk": 7,
+      "politicalInfluence": 8
+    },
+    "modifiers": {
+      "incomeMult": 1.12,
+      "baseGrowthAddPct": 0.2,
+      "inflationPressureAdd": 0.15,
+      "pollutionAdd": 0.3,
+      "synergyTags": ["security", "cyber"]
+    },
+    "unlock": {
+      "minPhaseL2": 3,
+      "requiresProjectsL2": ["L2_SECURITY_OVERHAUL"]
+    },
+    "shortImpactText": "Influencia politica alta con costo social."
+  },
+  {
+    "id": "L2_CULTURAL_PREMIUM",
+    "name": "Patrimonio premium",
+    "group": "Turismo",
+    "description": "Turismo cultural de alto valor y baja huella.",
+    "tags": ["heritage", "tourism", "creative"],
+    "attributes": {
+      "capex": 4,
+      "opex": 3,
+      "employment": 5,
+      "fiscalIncome": 5,
+      "exports": 4,
+      "envImpact": 2,
+      "energyDemand": 2,
+      "waterDemand": 2,
+      "humanCapitalReq": 4,
+      "risk": 3,
+      "politicalInfluence": 3
+    },
+    "modifiers": {
+      "incomeMult": 1.06,
+      "baseGrowthAddPct": 0.12,
+      "inflationPressureAdd": 0.04,
+      "pollutionAdd": 0.05,
+      "synergyTags": ["heritage", "tourism"]
+    },
+    "unlock": {
+      "minPhaseL2": 1,
+      "requiresProjectsL2": []
+    },
+    "shortImpactText": "Turismo premium con reputacion positiva."
+  }
+]

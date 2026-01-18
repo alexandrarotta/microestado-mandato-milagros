@@ -1,0 +1,156 @@
+[
+  {
+    "id": "PRESIDENT",
+    "labels": {
+      "male": "Presidente",
+      "female": "Presidenta",
+      "neutral": "Jefatura de Estado"
+    },
+    "modifiers": {
+      "decisionSpeed": 1.0,
+      "stabilityDrift": 0.02,
+      "corruptionDrift": -0.01
+    },
+    "flavorText": [
+      "Equilibrio institucional y discursos medidos.",
+      "Comisiones, sellos, y promesas con pie de pagina."
+    ],
+    "checksBalances": true
+  },
+  {
+    "id": "KING_ABSOLUTE",
+    "labels": {
+      "male": "Rey",
+      "female": "Reina",
+      "neutral": "La Corona"
+    },
+    "modifiers": {
+      "decisionSpeed": 1.15,
+      "protestRisk": -0.08,
+      "corruptionDrift": 0.04,
+      "reputationDrift": -0.01
+    },
+    "flavorText": [
+      "Velocidad real, paciencia ciudadana limitada.",
+      "Control rapido y reputacion vigilada."
+    ],
+    "sanctionRiskBase": 0.08
+  },
+  {
+    "id": "KING_PARLIAMENT",
+    "labels": {
+      "male": "Rey (Parlamentario)",
+      "female": "Reina (Parlamentaria)",
+      "neutral": "Monarquia Parlamentaria"
+    },
+    "modifiers": {
+      "decisionSpeed": 0.92,
+      "stabilityDrift": 0.05,
+      "reputationDrift": 0.02
+    },
+    "flavorText": [
+      "Estabilidad lenta, consenso largo.",
+      "Ceremonias, acuerdos y titulares previsibles."
+    ],
+    "sanctionRiskBase": 0.02
+  },
+  {
+    "id": "PRIME_MINISTER",
+    "labels": {
+      "male": "Primer Ministro",
+      "female": "Primera Ministra",
+      "neutral": "Jefatura de Gobierno"
+    },
+    "modifiers": {
+      "gdpGrowthBonus": 0.03,
+      "negotiationEventFreq": 0.25
+    },
+    "flavorText": [
+      "Coaliciones, pactos y agendas extendidas.",
+      "Eficiencia con cafe y paciencia parlamentaria."
+    ],
+    "coalitionBlock": true
+  },
+  {
+    "id": "DICTATOR",
+    "labels": {
+      "male": "Dictador",
+      "female": "Dictadora",
+      "neutral": "El Regimen"
+    },
+    "modifiers": {
+      "decisionSpeed": 1.2,
+      "protestRisk": -0.12,
+      "reputationDrift": -0.03,
+      "corruptionDrift": 0.03
+    },
+    "flavorText": [
+      "Control rapido y tensiones acumuladas.",
+      "Reputacion externa delicada, crisis ruidosas."
+    ],
+    "sanctionRiskBase": 0.12,
+    "crisisSeverity": 0.35
+  },
+  {
+    "id": "CHANCELLOR",
+    "labels": {
+      "male": "Canciller",
+      "female": "Canciller",
+      "neutral": "Cancilleria"
+    },
+    "modifiers": {
+      "reputationDrift": 0.04,
+      "gdpGrowthBonus": 0.015,
+      "diplomacyEventFreq": 0.35,
+      "reputationGrowthPenalty": 0.02
+    },
+    "flavorText": [
+      "Cumbres, comunicados y fotos con banderas.",
+      "Diplomacia afinada, interior algo impaciente."
+    ],
+    "sanctionRiskBase": 0.01
+  },
+  {
+    "id": "SUPREME_LEADER",
+    "labels": {
+      "male": "Lider Supremo",
+      "female": "Lider Suprema",
+      "neutral": "Liderazgo Supremo"
+    },
+    "modifiers": {
+      "decisionSpeed": 1.18,
+      "protestRisk": -0.1,
+      "reputationDrift": -0.04,
+      "corruptionDrift": 0.03,
+      "institutionalTrustDrift": 0.02
+    },
+    "flavorText": [
+      "Control narrativo y anuncios impecables.",
+      "La tension sube si la felicidad baja."
+    ],
+    "sanctionRiskBase": 0.14,
+    "crisisSeverity": 0.4,
+    "lowHappinessCrisisBoost": 0.3
+  },
+  {
+    "id": "DICTATORSHIP",
+    "labels": {
+      "male": "Jefe de la Dictadura",
+      "female": "Jefa de la Dictadura",
+      "neutral": "La Dictadura"
+    },
+    "modifiers": {
+      "decisionSpeed": 1.08,
+      "protestRisk": -0.1,
+      "corruptionDrift": 0.06,
+      "reputationDrift": -0.04,
+      "statDriftMultiplier": 0.85
+    },
+    "flavorText": [
+      "Control formalizado, agenda imperturbable.",
+      "Menos volatilidad diaria, crisis mas severas."
+    ],
+    "sanctionRiskBase": 0.18,
+    "crisisSeverity": 0.5
+  }
+]

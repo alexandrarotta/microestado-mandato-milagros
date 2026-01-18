@@ -1,0 +1,257 @@
+[
+  {
+    "id": "L2_DIGITAL_GOV",
+    "name": "Digitalizar gobierno",
+    "description": "Ventanillas digitales y tramites sin papel.",
+    "phase": 1,
+    "cost": 120,
+    "durationTicks": 180,
+    "impactScore": 65,
+    "requirements": {
+      "minPhaseL2": 1
+    },
+    "effects": {
+      "institutionalTrust": 4,
+      "corruption": -3,
+      "growthPct": 0.4
+    },
+    "recommendedBy": ["FINANCE", "PLANNER"]
+  },
+  {
+    "id": "L2_TRADE_CORRIDOR",
+    "name": "Corredor logisitico",
+    "description": "Infraestructura regional para comercio agil.",
+    "phase": 1,
+    "cost": 160,
+    "durationTicks": 220,
+    "impactScore": 70,
+    "requirements": {
+      "minPhaseL2": 1
+    },
+    "effects": {
+      "reputation": 2,
+      "growthPct": 0.5,
+      "treasury": 50
+    },
+    "recommendedBy": ["CHAMBER", "MASTER_BUILDER"]
+  },
+  {
+    "id": "L2_GRID_UPGRADE",
+    "name": "Modernizar la red",
+    "description": "Red electrica inteligente con menor perdida.",
+    "phase": 1,
+    "cost": 140,
+    "durationTicks": 200,
+    "impactScore": 60,
+    "requirements": {
+      "minPhaseL2": 1
+    },
+    "effects": {
+      "energy": 6,
+      "growthPct": 0.3,
+      "environmentalImpact": -2
+    },
+    "recommendedBy": ["CENTRAL_BANK", "MASTER_BUILDER"]
+  },
+  {
+    "id": "L2_CIVIC_DATA",
+    "name": "Observatorio macro",
+    "description": "Panel diario de indicadores y alertas.",
+    "phase": 1,
+    "cost": 100,
+    "durationTicks": 160,
+    "impactScore": 55,
+    "requirements": {
+      "minPhaseL2": 1
+    },
+    "effects": {
+      "institutionalTrust": 3,
+      "reputation": 1
+    },
+    "recommendedBy": ["OPPOSITION", "CHAMBER"]
+  },
+  {
+    "id": "L2_INDUSTRIAL_AUTOMATION",
+    "name": "Automatizacion industrial",
+    "description": "Robotica y mejora de productividad.",
+    "phase": 2,
+    "cost": 220,
+    "durationTicks": 260,
+    "impactScore": 85,
+    "requirements": {
+      "minPhaseL2": 2,
+      "requiresBaseIndustryId": "L2_ADV_MANUFACTURING"
+    },
+    "effects": {
+      "growthPct": 0.8,
+      "employment": -2,
+      "treasury": 80
+    },
+    "recommendedBy": ["PLANNER", "MASTER_BUILDER"]
+  },
+  {
+    "id": "L2_BLUE_PORT_UPGRADE",
+    "name": "Puerto azul",
+    "description": "Modernizar puertos y cadena maritima.",
+    "phase": 2,
+    "cost": 180,
+    "durationTicks": 240,
+    "impactScore": 75,
+    "requirements": {
+      "minPhaseL2": 2,
+      "requiresIndustries": ["L2_BLUE_ECONOMY"]
+    },
+    "effects": {
+      "reputation": 2,
+      "treasury": 80,
+      "growthPct": 0.3
+    },
+    "recommendedBy": ["CHAMBER", "ROYAL_COUNCIL"]
+  },
+  {
+    "id": "L2_TOURISM_PREMIUM",
+    "name": "Marca pais premium",
+    "description": "Posicionar el pais como destino elite.",
+    "phase": 2,
+    "cost": 150,
+    "durationTicks": 200,
+    "impactScore": 65,
+    "requirements": {
+      "minPhaseL2": 2,
+      "requiresBaseIndustryId": "L2_CULTURAL_PREMIUM"
+    },
+    "effects": {
+      "happiness": 3,
+      "reputation": 3
+    },
+    "recommendedBy": ["OPPOSITION", "PROPAGANDA"]
+  },
+  {
+    "id": "L2_CENTRAL_BANK_REFORM",
+    "name": "Reforma del Banco Central",
+    "description": "Reglas claras para metas de inflacion.",
+    "phase": 2,
+    "cost": 130,
+    "durationTicks": 210,
+    "impactScore": 70,
+    "requirements": {
+      "minPhaseL2": 2,
+      "requiresCentralBankAction": true
+    },
+    "effects": {
+      "institutionalTrust": 4,
+      "inflationPct": -0.2
+    },
+    "recommendedBy": ["CENTRAL_BANK"]
+  },
+  {
+    "id": "L2_RESEARCH_CLUSTER",
+    "name": "Cluster de investigacion",
+    "description": "Centros de I+D con alianzas globales.",
+    "phase": 3,
+    "cost": 240,
+    "durationTicks": 280,
+    "impactScore": 90,
+    "requirements": {
+      "minPhaseL2": 3
+    },
+    "effects": {
+      "innovation": 6,
+      "growthPct": 0.6
+    },
+    "recommendedBy": ["FINANCE", "ROYAL_COUNCIL"]
+  },
+  {
+    "id": "L2_SECURITY_OVERHAUL",
+    "name": "Reforma de seguridad",
+    "description": "Reorganizar inteligencia y respuesta rapida.",
+    "phase": 3,
+    "cost": 210,
+    "durationTicks": 240,
+    "impactScore": 78,
+    "requirements": {
+      "minPhaseL2": 3,
+      "requiresAdvisorIds": ["SECURITY", "ROYAL_COUNCIL"]
+    },
+    "effects": {
+      "stability": 4,
+      "reputation": -1
+    },
+    "recommendedBy": ["SECURITY", "ROYAL_COUNCIL"]
+  },
+  {
+    "id": "L2_FINTECH_SANDBOX",
+    "name": "Sandbox fintech",
+    "description": "Regular innovacion financiera sin frenar crecimiento.",
+    "phase": 3,
+    "cost": 210,
+    "durationTicks": 240,
+    "impactScore": 78,
+    "requirements": {
+      "minPhaseL2": 3,
+      "requiresIndustries": ["L2_DIGITAL_SERVICES"],
+      "requiresAdvisorIds": ["FINANCE"]
+    },
+    "effects": {
+      "treasury": 120,
+      "reputation": 2
+    },
+    "recommendedBy": ["FINANCE"]
+  },
+  {
+    "id": "L2_GREEN_BONDS",
+    "name": "Bonos verdes",
+    "description": "Financiar transicion energetica sostenible.",
+    "phase": 3,
+    "cost": 190,
+    "durationTicks": 230,
+    "impactScore": 70,
+    "requirements": {
+      "minPhaseL2": 3,
+      "requiresIndustries": ["L2_RENEWABLE_ENERGY"],
+      "requiresAdvisorIds": ["CHAMBER", "OPPOSITION"]
+    },
+    "effects": {
+      "reputation": 3,
+      "debt": -50
+    },
+    "recommendedBy": ["CHAMBER", "OPPOSITION"]
+  },
+  {
+    "id": "L2_REGIONAL_UNION",
+    "name": "Union economica regional",
+    "description": "Acuerdos profundos de integracion comercial.",
+    "phase": 4,
+    "cost": 300,
+    "durationTicks": 320,
+    "impactScore": 95,
+    "requirements": {
+      "minPhaseL2": 4,
+      "requiresProjects": ["L2_TRADE_CORRIDOR"]
+    },
+    "effects": {
+      "reputation": 6,
+      "growthPct": 0.8
+    },
+    "recommendedBy": ["OPPOSITION", "CHAMBER"]
+  },
+  {
+    "id": "L2_HUMAN_CAPITAL_PUSH",
+    "name": "Plan de capital humano",
+    "description": "Educacion tecnica y retencion de talento.",
+    "phase": 4,
+    "cost": 260,
+    "durationTicks": 300,
+    "impactScore": 88,
+    "requirements": {
+      "minPhaseL2": 4,
+      "requiresAdvisorIds": ["MASTER_BUILDER", "PLANNER", "FINANCE"]
+    },
+    "effects": {
+      "happiness": 4,
+      "institutionalTrust": 3,
+      "innovation": 4
+    },
+    "recommendedBy": ["MASTER_BUILDER", "PLANNER", "FINANCE"]
+  }
+]

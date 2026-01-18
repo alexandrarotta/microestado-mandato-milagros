@@ -1,0 +1,80 @@
+[
+  {
+    "id": "AGRICULTURE",
+    "label": "Agricultura",
+    "description": "Estable y sensible al clima. Buen pulso social.",
+    "incomeMult": 1.02,
+    "resourceDrain": 0.12,
+    "environmentalDrift": 0.01,
+    "reputationDrift": 0.01,
+    "stabilityDrift": 0.02,
+    "innovationDrift": 0.0,
+    "energyDemand": -0.02,
+    "climateSensitivity": 0.3
+  },
+  {
+    "id": "EXTRACTION",
+    "label": "Extraccion",
+    "description": "Dinero rapido, recursos en baja y ambiente inquieto.",
+    "incomeMult": 1.12,
+    "resourceDrain": 0.6,
+    "environmentalDrift": 0.05,
+    "reputationDrift": -0.03,
+    "stabilityDrift": -0.01,
+    "innovationDrift": -0.01,
+    "energyDemand": 0.05,
+    "climateSensitivity": 0.05
+  },
+  {
+    "id": "LIGHT_MANUFACTURING",
+    "label": "Manufactura ligera",
+    "description": "Necesita energia e infraestructura. Buen empleo.",
+    "incomeMult": 1.07,
+    "resourceDrain": 0.25,
+    "environmentalDrift": 0.03,
+    "reputationDrift": -0.01,
+    "stabilityDrift": 0.0,
+    "innovationDrift": 0.01,
+    "energyDemand": 0.08,
+    "climateSensitivity": 0.08
+  },
+  {
+    "id": "SERVICES",
+    "label": "Servicios",
+    "description": "Depende de reputacion y estabilidad. Flexible.",
+    "incomeMult": 1.05,
+    "resourceDrain": 0.1,
+    "environmentalDrift": -0.01,
+    "reputationDrift": 0.02,
+    "stabilityDrift": 0.01,
+    "innovationDrift": 0.02,
+    "energyDemand": 0.02,
+    "climateSensitivity": 0.04
+  },
+  {
+    "id": "TECHNOLOGY",
+    "label": "Tecnologia",
+    "description": "Requiere educacion e innovacion. Alto techo.",
+    "incomeMult": 1.1,
+    "resourceDrain": 0.05,
+    "environmentalDrift": -0.01,
+    "reputationDrift": 0.03,
+    "stabilityDrift": 0.0,
+    "innovationDrift": 0.05,
+    "energyDemand": 0.04,
+    "climateSensitivity": 0.02
+  },
+  {
+    "id": "SECURITY_DEFENSE_ABSTRACT",
+    "label": "Seguridad/Defensa abstracta",
+    "description": "Contratos y estabilidad, reputacion sensible.",
+    "incomeMult": 1.0,
+    "resourceDrain": 0.15,
+    "environmentalDrift": 0.02,
+    "reputationDrift": -0.04,
+    "stabilityDrift": 0.04,
+    "innovationDrift": 0.0,
+    "energyDemand": 0.04,
+    "climateSensitivity": 0.0
+  }
+]

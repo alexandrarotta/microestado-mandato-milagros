@@ -1,0 +1,151 @@
+{
+  "tickMs": 1000,
+  "offlineCapHours": 8,
+  "taxRates": {
+    "LOW": 0.08,
+    "MED": 0.14,
+    "HIGH": 0.2
+  },
+  "incomeScale": 0.08,
+  "spendingScale": 0.01,
+  "gdpGrowthScale": 0.002,
+  "statDriftScale": 0.3,
+  "baseDrifts": {
+    "happiness": -0.02,
+    "stability": -0.01,
+    "corruption": 0.01,
+    "reputation": -0.01
+  },
+  "collectionEfficiencyBase": 0.85,
+  "evasionBase": 0.05,
+  "eventBaseChance": 0.02,
+  "eventCooldownTicks": 12,
+  "projectCostCurve": 1,
+  "resourceUseBase": 0.12,
+  "resourceUseIndustryBoost": 0.6,
+  "resourceGrowthPenalty": 0.05,
+  "debtInterestRate": 0.0004,
+  "securityReputationPenalty": 0.03,
+  "minimumRevenue": {
+    "phase1Scale": 0.0005,
+    "floor": 1
+  },
+  "extractionBaseYield": 0.25,
+  "industryDiversificationWeight": 0.35,
+  "phaseThresholds": {
+    "phase2": { "gdp": 1000, "stability": 30, "trust": 30, "projects": 2 },
+    "phase3": { "gdp": 1600, "stability": 55, "trust": 50, "projects": 5 },
+    "phase4": { "gdp": 2000, "stability": 80, "trust": 70, "projects": 8 }
+  },
+  "phaseDefinitions": [
+    {
+      "id": 1,
+      "name": "Supervivencia",
+      "unlocks": ["impuestos", "industria lider", "10 proyectos"]
+    },
+    {
+      "id": 2,
+      "name": "Instituciones",
+      "unlocks": ["capacidad administrativa", "seleccionar 2 industrias", "2 proyectos"]
+    },
+    {
+      "id": 3,
+      "name": "Automatizacion",
+      "unlocks": ["agencias automaticas", "seleccionar 3 industrias", "5 proyectos"]
+    },
+    {
+      "id": 4,
+      "name": "Influencia",
+      "unlocks": ["tratados", "seleccionar 4 industrias", "8 proyectos"]
+    }
+  ],
+  "adminCapacity": {
+    "unlockPhase": 2,
+    "baseGain": 0.6,
+    "trustFactor": 0.02,
+    "max": 220
+  },
+  "agencies": {
+    "revenue": { "incomeMult": 1.05, "evasionReduction": 0.03 },
+    "inspection": { "corruptionDrift": -0.05, "environmentalDrift": -0.03 },
+    "promotion": { "reputationDrift": 0.04, "growthBonus": 0.01 }
+  },
+  "treaties": {
+    "incomeMult": 1.03,
+    "reputationDrift": 0.02
+  },
+  "emergencyPlan": {
+    "cooldownTicks": 70,
+    "effects": {
+      "stability": 50,
+      "happiness": 10,
+      "treasury": 200,
+      "corruption": -40
+    }
+  },
+  "decrees": [
+    {
+      "id": "FLASH_STIMULUS",
+      "name": "Plan Relampago",
+      "description": "Liquidez, anuncios y un logo gigante.",
+      "durationTicks": 20,
+      "cooldownTicks": 40,
+      "cost": { "stability": -3, "institutionalTrust": -2 },
+      "modifiers": { "incomeMult": 1.08, "growthBonus": 0.015 }
+    },
+    {
+      "id": "SOCIAL_PACT",
+      "name": "Pacto Social",
+      "description": "Calma social a cambio de paciencia fiscal.",
+      "durationTicks": 25,
+      "cooldownTicks": 50,
+      "cost": { "stability": -2, "reputation": -1 },
+      "modifiers": { "happinessDrift": 0.04, "incomeMult": 0.97 }
+    },
+    {
+      "id": "TRANSPARENCY_DRIVE",
+      "name": "Ventanas Abiertas",
+      "description": "Promesas de transparencia y planillas publicas.",
+      "durationTicks": 30,
+      "cooldownTicks": 60,
+      "cost": { "happiness": -2 },
+      "modifiers": { "corruptionDrift": -0.05, "institutionalTrustDrift": 0.04 }
+    },
+    {
+      "id": "DIPLO_TOUR",
+      "name": "Gira de Diplomacia",
+      "description": "Apretar manos, firmar memorandos.",
+      "durationTicks": 25,
+      "cooldownTicks": 60,
+      "cost": { "treasury": -60 },
+      "modifiers": { "reputationDrift": 0.05, "incomeMult": 1.03 }
+    }
+  ],
+  "startingState": {
+    "treasury": 150,
+    "gdp": 600,
+    "growthPct": 1.8,
+    "happiness": 45,
+    "stability": 45,
+    "institutionalTrust": 45,
+    "corruption": 25,
+    "resources": 40,
+    "reputation": 40,
+    "debt": 0,
+    "employment": 50,
+    "energy": 50,
+    "innovation": 45,
+    "inequality": 50,
+    "environmentalImpact": 40,
+    "tourismIndex": 20,
+    "tourismCapacity": 20,
+    "tourismPressure": 5,
+    "taxRatePct": 50,
+    "taxLevel": "MED",
+    "budget": {
+      "industryPct": 34,
+      "welfarePct": 36,
+      "securityDiplomacyPct": 30
+    }
+  }
+}

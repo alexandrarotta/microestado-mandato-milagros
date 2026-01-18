@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "EV_CORRUPTION_SCANDAL",
+    "title": "Escandalo de corrupcion",
+    "description": "Filtraciones incomodas y titulares repetidos.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["crisis", "governance"],
+    "conditions": { "statGte": { "corruption": 30 } },
+    "options": [
+      {
+        "key": "investigate",
+        "text": "Abrir investigacion oficial",
+        "effects": {
+          "corruptionDelta": -4,
+          "trustDelta": 2,
+          "treasuryDelta": -30
+        },
+        "news": "{{leaderName}} ordena una investigacion con carpetas nuevas."
+      },
+      {
+        "key": "downplay",
+        "text": "Minimizar el tema",
+        "effects": {
+          "trustDelta": -3,
+          "reputationDelta": -2,
+          "stabilityDelta": 1
+        },
+        "news": "{{leaderName}} llama al asunto un malentendido administrativo."
+      },
+      {
+        "key": "reshape",
+        "text": "Cambiar el gabinete",
+        "effects": {
+          "corruptionDelta": -2,
+          "happinessDelta": -1,
+          "stabilityDelta": 2
+        },
+        "news": "{{leaderName}} reordena el gabinete con cara seria."
+      }
+    ]
+  },
+  {
+    "id": "EV_FOREIGN_INVEST",
+    "title": "Oferta de inversion extranjera",
+    "description": "Una delegacion propone capital y condiciones finas.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["economy", "diplomacy"],
+    "conditions": { "statGte": { "reputation": 35 } },
+    "options": [
+      {
+        "key": "accept",
+        "text": "Aceptar la oferta",
+        "effects": {
+          "gdpDelta": 120,
+          "reputationDelta": 2,
+          "environmentalDelta": 2
+        },
+        "news": "{{leaderName}} firma un acuerdo con brindis moderado."
+      },
+      {
+        "key": "negotiate",
+        "text": "Negociar condiciones",
+        "effects": {
+          "gdpDelta": 60,
+          "trustDelta": 1,
+          "reputationDelta": 1
+        },
+        "news": "El equipo de {{leaderName}} pide revisar anexos y comas."
+      },
+      {
+        "key": "decline",
+        "text": "Rechazar con cortesia",
+        "effects": { "reputationDelta": -1, "stabilityDelta": 1 },
+        "news": "{{leaderName}} agradece y rechaza con una carta extensa."
+      }
+    ]
+  },
+  {
+    "id": "EV_PROTESTS",
+    "title": "Protestas",
+    "description": "Calles llenas, carteles creativos.",
+    "phaseMin": 1,
+    "weight": 4,
+    "tags": ["crisis", "society"],
+    "conditions": { "statLte": { "happiness": 55 } },
+    "options": [
+      {
+        "key": "dialogue",
+        "text": "Abrir dialogo",
+        "effects": {
+          "happinessDelta": 2,
+          "trustDelta": 2,
+          "stabilityDelta": 1
+        },
+        "news": "{{leaderName}} recibe delegados con libreta abierta."
+      },
+      {
+        "key": "promise",
+        "text": "Anunciar promesas rapidas",
+        "effects": {
+          "happinessDelta": 1,
+          "treasuryDelta": -50,
+          "trustDelta": -1
+        },
+        "news": "{{leaderName}} anuncia medidas inmediatas con poco margen."
+      },
+      {
+        "key": "firm",
+        "text": "Mantener la postura",
+        "effects": {
+          "stabilityDelta": 2,
+          "happinessDelta": -3,
+          "reputationDelta": -1
+        },
+        "news": "{{leaderName}} sostiene la linea y pide paciencia."
+      }
+    ]
+  },
+  {
+    "id": "EV_TOURISM_BOOM",
+    "title": "Boom turistico",
+    "description": "Llegan visitantes y fotos con filtro sepia.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["economy", "services"],
+    "conditions": { "statGte": { "reputation": 35 } },
+    "options": [
+      {
+        "key": "exploit",
+        "text": "Aprovechar el boom",
+        "effects": {
+          "gdpDelta": 80,
+          "treasuryDelta": 40,
+          "environmentalDelta": 2
+        },
+        "news": "{{leaderName}} habilita rutas turisticas express."
+      },
+      {
+        "key": "regulate",
+        "text": "Regular para cuidar la ciudad",
+        "effects": {
+          "reputationDelta": 1,
+          "gdpDelta": 40,
+          "environmentalDelta": -1
+        },
+        "news": "{{leaderName}} anuncia reglas de visita y horarios."
+      },
+      {
+        "key": "ignore",
+        "text": "No intervenir",
+        "effects": { "happinessDelta": -1, "stabilityDelta": -1 },
+        "news": "{{leaderName}} deja que el flujo siga su curso."
+      }
+    ]
+  },
+  {
+    "id": "EV_INFLATION",
+    "title": "Crisis inflacionaria",
+    "description": "Los precios corren mas rapido que las notas oficiales.",
+    "phaseMin": 2,
+    "weight": 2,
+    "tags": ["crisis", "economy"],
+    "options": [
+      {
+        "key": "rates",
+        "text": "Subir tasas y ajustar",
+        "effects": {
+          "growthDelta": -0.4,
+          "stabilityDelta": 1,
+          "reputationDelta": 1
+        },
+        "news": "{{leaderName}} anuncia un ajuste con tono tecnico."
+      },
+      {
+        "key": "controls",
+        "text": "Controles suaves de precios",
+        "effects": {
+          "happinessDelta": 1,
+          "gdpDelta": -50,
+          "corruptionDelta": 1
+        },
+        "news": "{{leaderName}} habilita controles temporales y una linea caliente."
+      },
+      {
+        "key": "stimulus",
+        "text": "Gastar para calmar",
+        "effects": {
+          "treasuryDelta": -80,
+          "happinessDelta": 2,
+          "debtDelta": 60
+        },
+        "news": "{{leaderName}} despliega un paquete de alivio fiscal."
+      }
+    ]
+  },
+  {
+    "id": "EV_TRADE_SANCTION",
+    "title": "Sancion comercial",
+    "description": "Notas formales anuncian restricciones abstractas.",
+    "phaseMin": 2,
+    "weight": 2,
+    "tags": ["sanction", "diplomacy"],
+    "conditions": { "statLte": { "reputation": 55 } },
+    "options": [
+      {
+        "key": "negotiate",
+        "text": "Negociar una salida",
+        "effects": {
+          "reputationDelta": 2,
+          "gdpDelta": -40,
+          "treasuryDelta": -30
+        },
+        "news": "{{leaderName}} abre un canal de dialogo urgente."
+      },
+      {
+        "key": "diversify",
+        "text": "Diversificar mercados",
+        "effects": {
+          "innovationDelta": 2,
+          "gdpDelta": 20,
+          "treasuryDelta": -50
+        },
+        "news": "{{leaderName}} busca nuevos destinos con mapas nuevos."
+      },
+      {
+        "key": "proud",
+        "text": "Responder con orgullo",
+        "effects": { "stabilityDelta": 2, "reputationDelta": -3 },
+        "news": "{{leaderName}} responde con firmeza y discurso largo."
+      }
+    ]
+  },
+  {
+    "id": "EV_RESOURCE_DISCOVERY",
+    "title": "Descubrimiento de recursos",
+    "description": "Se encuentran reservas con mas misterio que mapa.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["resource", "economy"],
+    "options": [
+      {
+        "key": "extract_fast",
+        "text": "Extraer rapido",
+        "effects": {
+          "resourcesDelta": 20,
+          "gdpDelta": 80,
+          "environmentalDelta": 4,
+          "reputationDelta": -2
+        },
+        "news": "{{leaderName}} aprueba un plan de extraccion acelerada."
+      },
+      {
+        "key": "extract_slow",
+        "text": "Extraer gradual",
+        "effects": { "resourcesDelta": 15, "gdpDelta": 40, "stabilityDelta": 1 },
+        "news": "{{leaderName}} prefiere un ritmo gradual y controlado."
+      },
+      {
+        "key": "protect",
+        "text": "Proteger la reserva",
+        "effects": { "resourcesDelta": 10, "reputationDelta": 2, "gdpDelta": -20 },
+        "news": "{{leaderName}} declara la zona como reserva estrategica."
+      }
+    ]
+  },
+  {
+    "id": "EV_MIGRATION",
+    "title": "Migracion",
+    "description": "Llegan nuevas familias con expectativas variadas.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["society"],
+    "options": [
+      {
+        "key": "integrate",
+        "text": "Integrar con programas basicos",
+        "effects": { "employmentDelta": 2, "happinessDelta": 1, "treasuryDelta": -30 },
+        "news": "{{leaderName}} lanza un plan de integracion comunitaria."
+      },
+      {
+        "key": "control",
+        "text": "Controlar el flujo",
+        "effects": { "stabilityDelta": 2, "reputationDelta": -1 },
+        "news": "{{leaderName}} anuncia controles administrativos extra."
+      },
+      {
+        "key": "talent",
+        "text": "Aprovechar talento",
+        "effects": { "innovationDelta": 2, "reputationDelta": 1, "inequalityDelta": -1 },
+        "news": "{{leaderName}} destaca el aporte de nuevas habilidades."
+      }
+    ]
+  },
+  {
+    "id": "EV_MEDIA_SCANDAL",
+    "title": "Escandalo mediatico absurdo",
+    "description": "Una portada exagera un gesto minimo.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["society"],
+    "options": [
+      {
+        "key": "apologize",
+        "text": "Pedir disculpas",
+        "effects": { "trustDelta": 1, "reputationDelta": 1 },
+        "news": "{{leaderName}} ofrece disculpas y promete sobriedad."
+      },
+      {
+        "key": "blame",
+        "text": "Culpar a la prensa",
+        "effects": { "reputationDelta": -2, "stabilityDelta": 1 },
+        "news": "{{leaderName}} critica los titulares y pide equilibrio."
+      },
+      {
+        "key": "meme",
+        "text": "Convertirlo en meme",
+        "effects": { "happinessDelta": 2, "corruptionDelta": 1 },
+        "news": "{{leaderName}} responde con humor y gifs oficiales."
+      }
+    ]
+  },
+  {
+    "id": "EV_INTERNATIONAL_AWARD",
+    "title": "Premio internacional",
+    "description": "Un organismo anonimo entrega un reconocimiento simbolico.",
+    "phaseMin": 3,
+    "weight": 1,
+    "tags": ["diplomacy"],
+    "conditions": { "statGte": { "reputation": 55 } },
+    "options": [
+      {
+        "key": "accept",
+        "text": "Aceptar con gratitud",
+        "effects": { "reputationDelta": 4, "trustDelta": 2 },
+        "news": "{{leaderName}} recibe el premio con sonrisa moderada."
+      },
+      {
+        "key": "share",
+        "text": "Compartir el credito",
+        "effects": { "happinessDelta": 2, "reputationDelta": 2 },
+        "news": "{{leaderName}} dedica el premio a la poblacion."
+      },
+      {
+        "key": "decline",
+        "text": "Rechazar con elegancia",
+        "effects": { "reputationDelta": -2, "stabilityDelta": 1 },
+        "news": "{{leaderName}} declina el premio con un comunicado largo."
+      }
+    ]
+  },
+  {
+    "id": "EV_AGRI_PEST",
+    "title": "Plaga en cultivos",
+    "description": "Los cultivos amanecen con invitados no deseados.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["agriculture", "climate"],
+    "conditions": { "industryIn": ["agriculture"] },
+    "options": [
+      {
+        "key": "subsidize",
+        "text": "Subsidios de emergencia",
+        "effects": { "treasuryDelta": -60, "gdpDelta": 40, "happinessDelta": 1 },
+        "news": "{{leaderName}} anuncia subsidios para productores afectados."
+      },
+      {
+        "key": "biocontrol",
+        "text": "Biocontrol y monitoreo",
+        "effects": { "treasuryDelta": -40, "innovationDelta": 2, "environmentalDelta": -1 },
+        "news": "{{leaderName}} apuesta por control biologico y seguimiento." 
+      },
+      {
+        "key": "abandon",
+        "text": "Dejar que pase la temporada",
+        "effects": { "gdpDelta": -60, "happinessDelta": -3, "resourcesDelta": 5 },
+        "news": "{{leaderName}} admite que la temporada sera dura."
+      }
+    ]
+  },
+  {
+    "id": "EV_EXTRACTION_TAILINGS",
+    "title": "Fallo de relave",
+    "description": "Una falla tecnica obliga a revisar operaciones mineras.",
+    "phaseMin": 2,
+    "weight": 1,
+    "cooldownTicks": 90,
+    "tags": ["mining", "crisis", "environment"],
+    "conditions": { "industryIn": ["extraction"] },
+    "options": [
+      {
+        "key": "audit_pause",
+        "text": "Auditoria y pausa temporal",
+        "effects": {
+          "gdpDelta": -80,
+          "reputationDelta": 3,
+          "environmentalDelta": -4,
+          "stabilityDelta": 1
+        },
+        "news": "{{leaderName}} ordena una auditoria y frena operaciones."
+      },
+      {
+        "key": "compensate",
+        "text": "Compensar y seguir",
+        "effects": { "treasuryDelta": -120, "reputationDelta": -2, "corruptionDelta": 1, "gdpDelta": 40 },
+        "news": "{{leaderName}} anuncia compensaciones sin detener la produccion."
+      },
+      {
+        "key": "coverup",
+        "text": "Encubrir el incidente",
+        "effects": { "corruptionDelta": 4, "reputationDelta": -5, "stabilityDelta": -2, "treasuryDelta": 40 },
+        "news": "{{leaderName}} minimiza el hecho en un comunicado breve."
+      }
+    ]
+  },
+  {
+    "id": "EV_EXTRACTION_SOCIAL_CONFLICT",
+    "title": "Conflicto socioambiental",
+    "description": "Comunidades cercanas exigen cambios y mas control.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["mining", "crisis"],
+    "conditions": { "industryIn": ["extraction"], "statLte": { "stability": 60 } },
+    "options": [
+      {
+        "key": "dialogue",
+        "text": "Abrir dialogo territorial",
+        "effects": { "stabilityDelta": 2, "trustDelta": 1, "gdpDelta": -20 },
+        "news": "{{leaderName}} convoca a mesas de dialogo locales."
+      },
+      {
+        "key": "security",
+        "text": "Reforzar seguridad",
+        "effects": { "stabilityDelta": 1, "reputationDelta": -3, "corruptionDelta": 1 },
+        "news": "{{leaderName}} anuncia refuerzos y protocolos estrictos."
+      },
+      {
+        "key": "share",
+        "text": "Fondo de desarrollo",
+        "effects": { "treasuryDelta": -70, "happinessDelta": 2, "stabilityDelta": 1 },
+        "news": "{{leaderName}} crea un fondo para la region afectada."
+      }
+    ]
+  },
+  {
+    "id": "EV_LIGHT_MFG_SUPPLY_CHAIN",
+    "title": "Cadena de suministros rota",
+    "description": "Un proveedor clave detiene entregas sin previo aviso.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["industry", "economy"],
+    "conditions": { "industryIn": ["light_mfg"] },
+    "options": [
+      {
+        "key": "localize",
+        "text": "Localizar proveedores",
+        "effects": { "treasuryDelta": -60, "innovationDelta": 2, "gdpDelta": 30 },
+        "news": "{{leaderName}} impulsa proveedores locales con incentivos."
+      },
+      {
+        "key": "stockpile",
+        "text": "Comprar stock estrategico",
+        "effects": { "treasuryDelta": -40, "stabilityDelta": 1, "resourcesDelta": -5 },
+        "news": "{{leaderName}} autoriza compras de emergencia." 
+      },
+      {
+        "key": "wait",
+        "text": "Esperar que se resuelva",
+        "effects": { "gdpDelta": -40, "happinessDelta": -1 },
+        "news": "{{leaderName}} decide esperar a que el mercado se ajuste." 
+      }
+    ]
+  },
+  {
+    "id": "EV_SERVICES_OVERTURISM",
+    "title": "Overtourism",
+    "description": "La ciudad se llena y los residentes pierden paciencia.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["services", "economy", "climate"],
+    "conditions": { "industryIn": ["services"], "statGte": { "reputation": 45 } },
+    "options": [
+      {
+        "key": "quotas",
+        "text": "Establecer cupos",
+        "effects": { "happinessDelta": 1, "environmentalDelta": -2, "gdpDelta": -20 },
+        "news": "{{leaderName}} fija cupos diarios para visitantes." 
+      },
+      {
+        "key": "taxes",
+        "text": "Subir tasas turisticas",
+        "effects": { "treasuryDelta": 60, "gdpDelta": 30, "happinessDelta": -2 },
+        "news": "{{leaderName}} anuncia nuevas tasas para turistas." 
+      },
+      {
+        "key": "free_flow",
+        "text": "Dejarlo libre",
+        "effects": { "gdpDelta": 50, "environmentalDelta": 3, "stabilityDelta": -1 },
+        "news": "{{leaderName}} decide no intervenir y dejar fluir." 
+      }
+    ]
+  },
+  {
+    "id": "EV_TECH_CYBERATTACK",
+    "title": "Ciberataque a sistemas publicos",
+    "description": "Varios sistemas quedan intermitentes y los teclados tiemblan.",
+    "phaseMin": 2,
+    "weight": 3,
+    "tags": ["tech", "crisis"],
+    "conditions": { "industryIn": ["tech"] },
+    "options": [
+      {
+        "key": "invest",
+        "text": "Invertir en seguridad",
+        "effects": { "treasuryDelta": -70, "trustDelta": 2, "innovationDelta": 1 },
+        "news": "{{leaderName}} aprueba un plan de ciberseguridad intensivo." 
+      },
+      {
+        "key": "patch",
+        "text": "Parche rapido",
+        "effects": { "trustDelta": 1, "stabilityDelta": 1, "treasuryDelta": -30 },
+        "news": "{{leaderName}} ordena un parche urgente y auditorias." 
+      },
+      {
+        "key": "deny",
+        "text": "Negar el alcance",
+        "effects": { "trustDelta": -3, "reputationDelta": -2, "stabilityDelta": -1 },
+        "news": "{{leaderName}} minimiza el incidente en conferencia." 
+      }
+    ]
+  },
+  {
+    "id": "EV_TECH_TALENT_DRAIN",
+    "title": "Fuga de talentos",
+    "description": "Profesionales clave reciben ofertas irresistibles.",
+    "phaseMin": 2,
+    "weight": 3,
+    "tags": ["tech", "economy"],
+    "conditions": { "industryIn": ["tech"] },
+    "options": [
+      {
+        "key": "retain",
+        "text": "Plan de retencion",
+        "effects": { "treasuryDelta": -50, "innovationDelta": 2, "inequalityDelta": 1 },
+        "news": "{{leaderName}} presenta incentivos para retener talento." 
+      },
+      {
+        "key": "open",
+        "text": "Abrir mas visados",
+        "effects": { "innovationDelta": 1, "reputationDelta": 1, "happinessDelta": -1 },
+        "news": "{{leaderName}} flexibiliza el ingreso de especialistas." 
+      },
+      {
+        "key": "ignore",
+        "text": "No intervenir",
+        "effects": { "innovationDelta": -2, "gdpDelta": -40 },
+        "news": "{{leaderName}} deja que el mercado haga su trabajo." 
+      }
+    ]
+  },
+  {
+    "id": "EV_SECURITY_PROCUREMENT_SCANDAL",
+    "title": "Compra de seguridad cuestionada",
+    "description": "Un contrato de defensa abstracta levanta sospechas.",
+    "phaseMin": 2,
+    "weight": 2,
+    "tags": ["security", "governance"],
+    "conditions": { "industryIn": ["security"] },
+    "options": [
+      {
+        "key": "cancel",
+        "text": "Cancelar el contrato",
+        "effects": { "stabilityDelta": -1, "trustDelta": 2, "treasuryDelta": -40 },
+        "news": "{{leaderName}} cancela el contrato y promete transparencia." 
+      },
+      {
+        "key": "audit",
+        "text": "Auditar proveedores",
+        "effects": { "corruptionDelta": -2, "trustDelta": 1, "treasuryDelta": -30 },
+        "news": "{{leaderName}} ordena una auditoria externa." 
+      },
+      {
+        "key": "defend",
+        "text": "Defender la compra",
+        "effects": { "stabilityDelta": 1, "reputationDelta": -2, "corruptionDelta": 1 },
+        "news": "{{leaderName}} defiende la decision en un comunicado." 
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_STORM_SURGE",
+    "title": "Marejada historica",
+    "description": "Las olas llegan mas lejos de lo habitual.",
+    "phaseMin": 1,
+    "weight": 2,
+    "cooldownTicks": 70,
+    "tags": ["climate", "archipelago", "crisis"],
+    "conditions": { "geographyIn": ["archipelago", "coastal"] },
+    "options": [
+      {
+        "key": "seawalls",
+        "text": "Obras costeras",
+        "effects": { "treasuryDelta": -120, "stabilityDelta": 2, "environmentalDelta": 2 },
+        "news": "{{leaderName}} anuncia muros y defensas costeras." 
+      },
+      {
+        "key": "relocate",
+        "text": "Reubicacion gradual",
+        "effects": { "happinessDelta": -2, "stabilityDelta": 1, "environmentalDelta": -1, "treasuryDelta": -60 },
+        "news": "{{leaderName}} presenta un plan de reubicacion por etapas." 
+      },
+      {
+        "key": "quick_rebuild",
+        "text": "Reconstruccion rapida",
+        "effects": { "treasuryDelta": -80, "gdpDelta": 30, "reputationDelta": -1 },
+        "followUpEventId": "EV_SUS_CONTRACT",
+        "news": "{{leaderName}} ordena reconstruccion inmediata con contratos rapidos." 
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_MICROPLASTIC",
+    "title": "Microplasticos en la cadena alimentaria",
+    "description": "Laboratorios locales detectan residuos en la costa.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["climate", "archipelago"],
+    "conditions": { "geographyIn": ["archipelago", "coastal"] },
+    "options": [
+      {
+        "key": "ban",
+        "text": "Prohibir plasticos de un solo uso",
+        "effects": { "reputationDelta": 2, "environmentalDelta": -3, "treasuryDelta": -40 },
+        "news": "{{leaderName}} lanza una prohibicion progresiva de plasticos." 
+      },
+      {
+        "key": "campaign",
+        "text": "Campana voluntaria",
+        "effects": { "happinessDelta": 1, "reputationDelta": 1, "environmentalDelta": -1 },
+        "news": "{{leaderName}} impulsa una campana de concientizacion." 
+      },
+      {
+        "key": "deny",
+        "text": "Negar con presentacion",
+        "effects": { "trustDelta": -2, "reputationDelta": -2, "stabilityDelta": 1 },
+        "news": "{{leaderName}} descarta los reportes en una rueda de prensa." 
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_WATER_LIMIT",
+    "title": "Agua dulce al limite",
+    "description": "Los reservorios muestran niveles historicamente bajos.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["resources", "archipelago"],
+    "conditions": { "geographyIn": ["archipelago"] },
+    "options": [
+      {
+        "key": "desalination",
+        "text": "Instalar desaladoras",
+        "effects": { "treasuryDelta": -120, "energyDelta": -4, "stabilityDelta": 1, "resourcesDelta": 6 },
+        "news": "{{leaderName}} aprueba plantas desaladoras con urgencia." 
+      },
+      {
+        "key": "rationing",
+        "text": "Racionamiento estricto",
+        "effects": { "happinessDelta": -2, "stabilityDelta": 2, "resourcesDelta": 4 },
+        "news": "{{leaderName}} activa un cronograma de racionamiento." 
+      },
+      {
+        "key": "import",
+        "text": "Importar agua",
+        "effects": { "debtDelta": 120, "reputationDelta": 1, "stabilityDelta": 1 },
+        "news": "{{leaderName}} negocia importaciones de emergencia." 
+      }
+    ]
+  },
+  {
+    "id": "EV_COAST_CORAL_BLEACH",
+    "title": "Blanqueamiento de corales",
+    "description": "Los buzos reportan zonas enteras sin color.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["climate", "tourism"],
+    "conditions": { "geographyIn": ["archipelago", "coastal"] },
+    "options": [
+      {
+        "key": "protect",
+        "text": "Zonas protegidas",
+        "effects": { "treasuryDelta": -50, "environmentalDelta": -3, "reputationDelta": 2 },
+        "news": "{{leaderName}} declara areas protegidas para los arrecifes." 
+      },
+      {
+        "key": "shift",
+        "text": "Diversificar turismo",
+        "effects": { "gdpDelta": -30, "innovationDelta": 1, "reputationDelta": 1 },
+        "news": "{{leaderName}} impulsa turismo alternativo y cultural." 
+      },
+      {
+        "key": "ignore",
+        "text": "Ignorar la alerta",
+        "effects": { "gdpDelta": 40, "environmentalDelta": 3, "reputationDelta": -2 },
+        "news": "{{leaderName}} prioriza ingresos y minimiza el problema." 
+      }
+    ]
+  },
+  {
+    "id": "EV_COAST_EROSION",
+    "title": "Erosion costera",
+    "description": "La linea de costa retrocede mas de lo previsto.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["climate", "coastal"],
+    "conditions": { "geographyIn": ["coastal", "archipelago"] },
+    "options": [
+      {
+        "key": "dunes",
+        "text": "Restaurar dunas",
+        "effects": { "treasuryDelta": -40, "environmentalDelta": -2, "stabilityDelta": 1 },
+        "news": "{{leaderName}} anuncia un plan de restauracion natural." 
+      },
+      {
+        "key": "hard",
+        "text": "Infraestructura dura",
+        "effects": { "treasuryDelta": -80, "stabilityDelta": 2, "environmentalDelta": 2 },
+        "news": "{{leaderName}} ordena obras duras contra la erosion." 
+      },
+      {
+        "key": "postpone",
+        "text": "Postergar decision",
+        "effects": { "stabilityDelta": -1, "reputationDelta": -1 },
+        "news": "{{leaderName}} decide esperar mas estudios." 
+      }
+    ]
+  },
+  {
+    "id": "EV_MOUNT_QUAKE",
+    "title": "Sismo 6.8",
+    "description": "Un temblor moderado corta servicios y rutas.",
+    "phaseMin": 1,
+    "weight": 1,
+    "cooldownTicks": 90,
+    "tags": ["crisis", "climate", "mountain"],
+    "conditions": { "geographyIn": ["mountain"] },
+    "options": [
+      {
+        "key": "infrastructure",
+        "text": "Invertir en infraestructura",
+        "effects": { "debtDelta": 120, "stabilityDelta": 2, "happinessDelta": 1 },
+        "news": "{{leaderName}} anuncia un plan de refuerzo estructural." 
+      },
+      {
+        "key": "emergency",
+        "text": "Fondo de emergencia",
+        "effects": { "treasuryDelta": -120, "stabilityDelta": 3, "gdpDelta": -20 },
+        "news": "{{leaderName}} activa un fondo de emergencia inmediato." 
+      },
+      {
+        "key": "cut",
+        "text": "Recortar bienestar",
+        "effects": { "treasuryDelta": 40, "happinessDelta": -3, "stabilityDelta": -1 },
+        "news": "{{leaderName}} recorta gastos sociales para cubrir la crisis." 
+      }
+    ]
+  },
+  {
+    "id": "EV_MOUNT_VOLCANO",
+    "title": "Ceniza en el aire",
+    "description": "La actividad volcanica cubre la ciudad de polvo fino.",
+    "phaseMin": 2,
+    "weight": 1,
+    "cooldownTicks": 110,
+    "tags": ["crisis", "climate", "mountain"],
+    "conditions": { "geographyIn": ["mountain"] },
+    "options": [
+      {
+        "key": "evacuate",
+        "text": "Evacuar y cerrar",
+        "effects": { "treasuryDelta": -80, "stabilityDelta": 2, "reputationDelta": 1 },
+        "news": "{{leaderName}} ordena evacuaciones preventivas." 
+      },
+      {
+        "key": "keep",
+        "text": "Continuar economia",
+        "effects": { "gdpDelta": 40, "stabilityDelta": -2, "reputationDelta": -2 },
+        "news": "{{leaderName}} prioriza la continuidad economica." 
+      },
+      {
+        "key": "help",
+        "text": "Negociar ayuda",
+        "effects": { "debtDelta": 100, "reputationDelta": 2, "happinessDelta": 1 },
+        "news": "{{leaderName}} solicita apoyo tecnico internacional." 
+      }
+    ]
+  },
+  {
+    "id": "EV_MOUNT_LANDSLIDE",
+    "title": "Aluviones y derrumbes",
+    "description": "Las rutas principales quedan bloqueadas por deslizamientos.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["crisis", "infrastructure", "mountain"],
+    "conditions": { "geographyIn": ["mountain"] },
+    "options": [
+      {
+        "key": "clear",
+        "text": "Limpiar rutas",
+        "effects": { "treasuryDelta": -50, "stabilityDelta": 1, "gdpDelta": 20 },
+        "news": "{{leaderName}} envia maquinaria a los pasos clave." 
+      },
+      {
+        "key": "relocate",
+        "text": "Reubicar poblados",
+        "effects": { "happinessDelta": -2, "stabilityDelta": 1, "treasuryDelta": -40 },
+        "news": "{{leaderName}} anuncia reubicaciones preventivas." 
+      },
+      {
+        "key": "delay",
+        "text": "Postergar obras",
+        "effects": { "gdpDelta": -40, "stabilityDelta": -1 },
+        "news": "{{leaderName}} pospone intervenciones por falta de fondos." 
+      }
+    ]
+  },
+  {
+    "id": "EV_FOREST_FIRES",
+    "title": "Incendios forestales",
+    "description": "El humo cubre el horizonte y las alertas crecen.",
+    "phaseMin": 1,
+    "weight": 2,
+    "cooldownTicks": 70,
+    "tags": ["climate", "crisis", "forest"],
+    "conditions": { "geographyIn": ["forest"] },
+    "options": [
+      {
+        "key": "brigades",
+        "text": "Brigadas nacionales",
+        "effects": { "treasuryDelta": -60, "environmentalDelta": -2, "reputationDelta": 1 },
+        "news": "{{leaderName}} moviliza brigadas y equipos de emergencia." 
+      },
+      {
+        "key": "aid",
+        "text": "Pedir ayuda internacional",
+        "effects": { "debtDelta": 80, "reputationDelta": 2, "happinessDelta": 1 },
+        "followUpEventId": "EV_INTL_AID",
+        "news": "{{leaderName}} solicita apoyo internacional para combatir el fuego." 
+      },
+      {
+        "key": "minimize",
+        "text": "Minimizar el impacto",
+        "effects": { "happinessDelta": -1, "reputationDelta": -2, "environmentalDelta": 3 },
+        "news": "{{leaderName}} resta importancia a los informes." 
+      }
+    ]
+  },
+  {
+    "id": "EV_FOREST_PEST",
+    "title": "Plagas forestales",
+    "description": "Una plaga debilita especies clave del bosque.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["climate", "agriculture", "forest"],
+    "conditions": { "geographyIn": ["forest"] },
+    "options": [
+      {
+        "key": "biocontrol",
+        "text": "Control biologico",
+        "effects": { "treasuryDelta": -40, "innovationDelta": 1, "environmentalDelta": -1 },
+        "news": "{{leaderName}} aprueba medidas de control biologico." 
+      },
+      {
+        "key": "pesticides",
+        "text": "Usar pesticidas",
+        "effects": { "gdpDelta": 30, "environmentalDelta": 2, "reputationDelta": -1 },
+        "news": "{{leaderName}} autoriza pesticidas para frenar la plaga." 
+      },
+      {
+        "key": "wait",
+        "text": "Esperar que pase",
+        "effects": { "gdpDelta": -40, "happinessDelta": -1 },
+        "news": "{{leaderName}} decide esperar una mejora natural." 
+      }
+    ]
+  },
+  {
+    "id": "EV_DESERT_HEATWAVE",
+    "title": "Ola de calor",
+    "description": "Las temperaturas superan registros y sube el malestar.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["climate", "desert"],
+    "conditions": { "geographyIn": ["desert"] },
+    "options": [
+      {
+        "key": "cooling",
+        "text": "Centros de enfriamiento",
+        "effects": { "treasuryDelta": -30, "happinessDelta": 2, "energyDelta": -3 },
+        "news": "{{leaderName}} habilita centros de enfriamiento comunitarios." 
+      },
+      {
+        "key": "shift",
+        "text": "Cambiar horarios laborales",
+        "effects": { "stabilityDelta": 1, "gdpDelta": -20, "happinessDelta": 1 },
+        "news": "{{leaderName}} ajusta horarios para evitar el calor." 
+      },
+      {
+        "key": "ignore",
+        "text": "No intervenir",
+        "effects": { "happinessDelta": -3, "stabilityDelta": -1 },
+        "news": "{{leaderName}} decide no intervenir en la ola de calor." 
+      }
+    ]
+  },
+  {
+    "id": "EV_DESERT_DROUGHT",
+    "title": "Sequia prolongada",
+    "description": "Las reservas bajan y la arena avanza.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["climate", "crisis", "desert"],
+    "conditions": { "geographyIn": ["desert"] },
+    "options": [
+      {
+        "key": "ration",
+        "text": "Racionar agua",
+        "effects": { "happinessDelta": -2, "stabilityDelta": 2, "resourcesDelta": 4 },
+        "news": "{{leaderName}} activa un plan de racionamiento." 
+      },
+      {
+        "key": "import",
+        "text": "Importar suministros",
+        "effects": { "treasuryDelta": -60, "reputationDelta": 1, "stabilityDelta": 1 },
+        "news": "{{leaderName}} gestiona importaciones de emergencia." 
+      },
+      {
+        "key": "infrastructure",
+        "text": "Infraestructura hidrica",
+        "effects": { "treasuryDelta": -90, "innovationDelta": 2, "environmentalDelta": 1 },
+        "news": "{{leaderName}} anuncia nuevas obras hidricas." 
+      }
+    ]
+  },
+  {
+    "id": "EV_URBAN_HOUSING",
+    "title": "Crisis de vivienda",
+    "description": "Los alquileres se disparan y crece la presion social.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["society", "urban"],
+    "conditions": { "geographyIn": ["urban"] },
+    "options": [
+      {
+        "key": "build",
+        "text": "Construir vivienda publica",
+        "effects": { "treasuryDelta": -80, "inequalityDelta": -3, "happinessDelta": 2 },
+        "news": "{{leaderName}} anuncia un plan de vivienda publica." 
+      },
+      {
+        "key": "vouchers",
+        "text": "Bonos de alquiler",
+        "effects": { "treasuryDelta": -40, "inequalityDelta": -1, "happinessDelta": 1 },
+        "news": "{{leaderName}} lanza bonos de alquiler temporales." 
+      },
+      {
+        "key": "ignore",
+        "text": "No intervenir",
+        "effects": { "inequalityDelta": 2, "stabilityDelta": -2 },
+        "news": "{{leaderName}} decide no intervenir en el mercado." 
+      }
+    ]
+  },
+  {
+    "id": "EV_URBAN_TRANSIT_STRIKE",
+    "title": "Huelga de transporte",
+    "description": "El transporte se detiene y crece la tension.",
+    "phaseMin": 2,
+    "weight": 2,
+    "tags": ["crisis", "society", "urban"],
+    "conditions": { "geographyIn": ["urban"] },
+    "options": [
+      {
+        "key": "deal",
+        "text": "Acuerdo parcial",
+        "effects": { "treasuryDelta": -50, "stabilityDelta": 1, "happinessDelta": 2 },
+        "news": "{{leaderName}} firma un acuerdo con el gremio." 
+      },
+      {
+        "key": "firm",
+        "text": "Mantener postura",
+        "effects": { "stabilityDelta": 1, "happinessDelta": -3, "reputationDelta": -1 },
+        "news": "{{leaderName}} mantiene la postura y pide paciencia." 
+      },
+      {
+        "key": "automate",
+        "text": "Acelerar automatizacion",
+        "effects": { "innovationDelta": 2, "gdpDelta": 20, "happinessDelta": -2 },
+        "news": "{{leaderName}} anuncia un plan de automatizacion del transporte." 
+      }
+    ]
+  },
+  {
+    "id": "EV_SUS_CONTRACT",
+    "title": "Contrato sospechoso",
+    "description": "Un contrato apresurado levanta dudas en la oposicion.",
+    "phaseMin": 1,
+    "weight": 0,
+    "tags": ["followup", "governance"],
+    "options": [
+      {
+        "key": "audit",
+        "text": "Auditar el contrato",
+        "effects": { "corruptionDelta": -2, "trustDelta": 1, "treasuryDelta": -20 },
+        "news": "{{leaderName}} ordena auditar el contrato de emergencia." 
+      },
+      {
+        "key": "proceed",
+        "text": "Seguir adelante",
+        "effects": { "corruptionDelta": 2, "treasuryDelta": 40, "reputationDelta": -1 },
+        "news": "{{leaderName}} defiende la urgencia y sigue adelante." 
+      }
+    ]
+  },
+  {
+    "id": "EV_INTL_AID",
+    "title": "Ayuda internacional",
+    "description": "Llegan equipos y condiciones para la reconstruccion.",
+    "phaseMin": 1,
+    "weight": 0,
+    "tags": ["followup", "diplomacy"],
+    "options": [
+      {
+        "key": "coordinate",
+        "text": "Coordinar con aliados",
+        "effects": { "reputationDelta": 2, "trustDelta": 1, "treasuryDelta": -20 },
+        "news": "{{leaderName}} coordina la ayuda con equipos internacionales." 
+      },
+      {
+        "key": "politicize",
+        "text": "Politizar la ayuda",
+        "effects": { "reputationDelta": -2, "stabilityDelta": 1, "happinessDelta": -1 },
+        "news": "{{leaderName}} usa la ayuda en mensajes internos." 
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_PORT_BLOCKED",
+    "title": "Puerto interrumpido",
+    "description": "El puerto principal queda fuera de servicio por una semana.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["archipelago", "economy", "crisis"],
+    "conditions": { "geographyIn": ["archipelago", "coastal"] },
+    "options": [
+      {
+        "key": "logistics",
+        "text": "Puente logistico de emergencia",
+        "effects": { "treasuryDelta": -70, "stabilityDelta": 1, "gdpDelta": -20 },
+        "news": "{{leaderName}} monta un puente logistico temporal."
+      },
+      {
+        "key": "charter",
+        "text": "Contratar flota privada",
+        "effects": { "treasuryDelta": -90, "corruptionDelta": 1, "gdpDelta": 20 },
+        "news": "{{leaderName}} firma contratos express con operadores privados."
+      },
+      {
+        "key": "ration",
+        "text": "Racionar importaciones",
+        "effects": { "happinessDelta": -2, "resourcesDelta": 3, "stabilityDelta": 1 },
+        "news": "{{leaderName}} anuncia un plan de racionamiento portuario."
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_FISH_ALERT",
+    "title": "Alerta sanitaria en pesca",
+    "description": "Autoridades detectan irregularidades en la cadena pesquera.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["archipelago", "climate", "society"],
+    "conditions": { "geographyIn": ["archipelago", "coastal"] },
+    "options": [
+      {
+        "key": "inspect",
+        "text": "Inspecciones intensivas",
+        "effects": { "treasuryDelta": -40, "reputationDelta": 1, "happinessDelta": 1, "environmentalDelta": -1 },
+        "news": "{{leaderName}} ordena inspecciones en toda la cadena."
+      },
+      {
+        "key": "ban",
+        "text": "Suspender faenas por una temporada",
+        "effects": { "gdpDelta": -50, "reputationDelta": 2, "environmentalDelta": -2 },
+        "news": "{{leaderName}} suspende temporalmente la pesca comercial."
+      },
+      {
+        "key": "deny",
+        "text": "Negar la alerta",
+        "effects": { "trustDelta": -2, "reputationDelta": -2, "gdpDelta": 20 },
+        "news": "{{leaderName}} minimiza la alerta en cadena nacional."
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_SALT_INTRUSION",
+    "title": "Intrusion salina",
+    "description": "El agua salada se filtra en pozos costeros.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["archipelago", "resources"],
+    "conditions": { "geographyIn": ["archipelago", "coastal"] },
+    "options": [
+      {
+        "key": "wells",
+        "text": "Reacondicionar pozos",
+        "effects": { "treasuryDelta": -60, "resourcesDelta": 4, "stabilityDelta": 1 },
+        "news": "{{leaderName}} anuncia obras para salvar pozos afectados."
+      },
+      {
+        "key": "relocate",
+        "text": "Reubicar cultivos costeros",
+        "effects": { "happinessDelta": -2, "stabilityDelta": 1, "treasuryDelta": -40 },
+        "news": "{{leaderName}} propone reubicar zonas productivas."
+      },
+      {
+        "key": "ignore",
+        "text": "No intervenir",
+        "effects": { "resourcesDelta": -4, "stabilityDelta": -1 },
+        "news": "{{leaderName}} decide esperar un ajuste natural."
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_ISLAND_POWER",
+    "title": "Crisis de energia insular",
+    "description": "El sistema electrico isleño opera al limite.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["archipelago", "energy", "crisis"],
+    "conditions": { "geographyIn": ["archipelago"] },
+    "options": [
+      {
+        "key": "microgrids",
+        "text": "Invertir en microredes",
+        "effects": { "treasuryDelta": -60, "energyDelta": 4, "innovationDelta": 1 },
+        "news": "{{leaderName}} lanza un plan de microredes insulares."
+      },
+      {
+        "key": "fuel",
+        "text": "Importar combustible",
+        "effects": { "treasuryDelta": -40, "energyDelta": 3, "environmentalDelta": 2 },
+        "news": "{{leaderName}} autoriza importaciones urgentes de combustible."
+      },
+      {
+        "key": "reduce",
+        "text": "Reducir consumo",
+        "effects": { "happinessDelta": -2, "stabilityDelta": 1, "energyDelta": 1 },
+        "news": "{{leaderName}} pide reduccion voluntaria del consumo."
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_FERRY_CRISIS",
+    "title": "Crisis de ferris",
+    "description": "La conectividad entre islas se vuelve irregular.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["archipelago", "economy"],
+    "conditions": { "geographyIn": ["archipelago"] },
+    "options": [
+      {
+        "key": "subsidize",
+        "text": "Subsidios a rutas clave",
+        "effects": { "treasuryDelta": -50, "stabilityDelta": 1, "gdpDelta": 20 },
+        "news": "{{leaderName}} garantiza rutas esenciales con subsidios."
+      },
+      {
+        "key": "privatize",
+        "text": "Privatizar rutas",
+        "effects": { "treasuryDelta": 30, "corruptionDelta": 1, "happinessDelta": -1 },
+        "news": "{{leaderName}} abre licitaciones para rutas maritimas."
+      },
+      {
+        "key": "wait",
+        "text": "Esperar que el mercado ajuste",
+        "effects": { "gdpDelta": -30, "stabilityDelta": -1 },
+        "news": "{{leaderName}} decide esperar una solucion de mercado."
+      }
+    ]
+  },
+  {
+    "id": "EV_ARCH_WASTE_BACKLOG",
+    "title": "Atraso en residuos costeros",
+    "description": "Los residuos se acumulan y el turismo se inquieta.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["archipelago", "environment"],
+    "conditions": { "geographyIn": ["archipelago", "coastal"] },
+    "options": [
+      {
+        "key": "modernize",
+        "text": "Modernizar recoleccion",
+        "effects": { "treasuryDelta": -70, "environmentalDelta": -2, "reputationDelta": 1 },
+        "news": "{{leaderName}} anuncia una modernizacion de la recoleccion."
+      },
+      {
+        "key": "export",
+        "text": "Enviar residuos fuera",
+        "effects": { "debtDelta": 80, "reputationDelta": -1, "stabilityDelta": 1 },
+        "news": "{{leaderName}} contrata traslado externo de residuos."
+      },
+      {
+        "key": "delay",
+        "text": "Postergar el tema",
+        "effects": { "stabilityDelta": -1, "reputationDelta": -1, "environmentalDelta": 2 },
+        "news": "{{leaderName}} pospone decisiones sobre residuos."
+      }
+    ]
+  },
+  {
+    "id": "EV_EXT_WATER_CONFLICT",
+    "title": "Conflicto por agua",
+    "description": "Productores locales reclaman por el uso industrial del agua.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["extraction", "crisis"],
+    "conditions": { "industryIn": ["extraction"] },
+    "options": [
+      {
+        "key": "allocate",
+        "text": "Reasignar cupos de agua",
+        "effects": { "stabilityDelta": 1, "resourcesDelta": -3, "happinessDelta": -1 },
+        "news": "{{leaderName}} redefine cupos de agua para calmar el conflicto."
+      },
+      {
+        "key": "recycle",
+        "text": "Invertir en recirculacion",
+        "effects": { "treasuryDelta": -60, "innovationDelta": 2, "environmentalDelta": -2 },
+        "news": "{{leaderName}} anuncia inversiones en recirculacion de agua."
+      },
+      {
+        "key": "ignore",
+        "text": "No intervenir",
+        "effects": { "stabilityDelta": -2, "reputationDelta": -2, "treasuryDelta": 20 },
+        "news": "{{leaderName}} decide no intervenir en el conflicto."
+      }
+    ]
+  },
+  {
+    "id": "EV_EXT_GREEN_TARIFF",
+    "title": "Sancion verde",
+    "description": "Un bloque comercial anuncia un impuesto ambiental extra.",
+    "phaseMin": 2,
+    "weight": 2,
+    "tags": ["extraction", "sanction", "economy"],
+    "conditions": { "industryIn": ["extraction"] },
+    "options": [
+      {
+        "key": "transition",
+        "text": "Transicion ambiental",
+        "effects": { "treasuryDelta": -60, "innovationDelta": 2, "reputationDelta": 2 },
+        "news": "{{leaderName}} anuncia una transicion ambiental acelerada."
+      },
+      {
+        "key": "lobby",
+        "text": "Hacer lobby",
+        "effects": { "treasuryDelta": -40, "reputationDelta": -1, "corruptionDelta": 1, "gdpDelta": 30 },
+        "news": "{{leaderName}} despliega lobby diplomático intenso."
+      },
+      {
+        "key": "diversify",
+        "text": "Diversificar exportaciones",
+        "effects": { "gdpDelta": -20, "resourcesDelta": 5, "reputationDelta": 1 },
+        "news": "{{leaderName}} acelera la diversificacion de mercados."
+      }
+    ]
+  },
+  {
+    "id": "EV_EXT_CREATIVE_CONTRACT",
+    "title": "Contratos creativos",
+    "description": "Surgen contratos poco claros en el sector extractivo.",
+    "phaseMin": 1,
+    "weight": 3,
+    "tags": ["extraction", "governance"],
+    "conditions": { "industryIn": ["extraction"] },
+    "options": [
+      {
+        "key": "audit",
+        "text": "Auditar contratos",
+        "effects": { "corruptionDelta": -3, "trustDelta": 1, "treasuryDelta": -30 },
+        "news": "{{leaderName}} ordena una auditoria de contratos."
+      },
+      {
+        "key": "legalize",
+        "text": "Legalizar condiciones",
+        "effects": { "treasuryDelta": 50, "corruptionDelta": 2, "reputationDelta": -2 },
+        "news": "{{leaderName}} regulariza contratos con nuevas reglas."
+      },
+      {
+        "key": "delay",
+        "text": "Dejarlo para luego",
+        "effects": { "stabilityDelta": -1, "trustDelta": -1 },
+        "news": "{{leaderName}} pospone la revision contractual."
+      }
+    ]
+  },
+  {
+    "id": "EV_EXT_PRODUCTIVE_VEIN",
+    "title": "Hallazgo productivo",
+    "description": "Una nueva veta aparece con alto potencial.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["extraction", "economy"],
+    "conditions": { "industryIn": ["extraction"] },
+    "options": [
+      {
+        "key": "rush",
+        "text": "Explotar rapido",
+        "effects": { "gdpDelta": 90, "environmentalDelta": 3, "reputationDelta": -1 },
+        "news": "{{leaderName}} aprueba explotacion acelerada."
+      },
+      {
+        "key": "cautious",
+        "text": "Explotar con cuidado",
+        "effects": { "gdpDelta": 50, "environmentalDelta": 1, "stabilityDelta": 1 },
+        "news": "{{leaderName}} opta por un plan gradual."
+      },
+      {
+        "key": "reserve",
+        "text": "Guardar para el futuro",
+        "effects": { "resourcesDelta": 10, "reputationDelta": 2, "gdpDelta": -20 },
+        "news": "{{leaderName}} decide reservar la nueva veta."
+      }
+    ]
+  },
+  {
+    "id": "EV_EXT_ECOSYSTEM_DAMAGE",
+    "title": "Daño ecosistemico",
+    "description": "Reportes advierten impacto ambiental creciente.",
+    "phaseMin": 2,
+    "weight": 1,
+    "cooldownTicks": 80,
+    "tags": ["extraction", "crisis", "environment"],
+    "conditions": { "industryIn": ["extraction"] },
+    "options": [
+      {
+        "key": "pause",
+        "text": "Pausar operaciones",
+        "effects": { "gdpDelta": -70, "reputationDelta": 2, "environmentalDelta": -3 },
+        "news": "{{leaderName}} ordena una pausa ambiental preventiva."
+      },
+      {
+        "key": "compensate",
+        "text": "Compensar y seguir",
+        "effects": { "treasuryDelta": -100, "reputationDelta": -1, "corruptionDelta": 1, "stabilityDelta": 1 },
+        "news": "{{leaderName}} anuncia compensaciones sin detener la produccion."
+      },
+      {
+        "key": "deny",
+        "text": "Negar el impacto",
+        "effects": { "reputationDelta": -3, "stabilityDelta": -1, "treasuryDelta": 40 },
+        "news": "{{leaderName}} minimiza los reportes ambientales."
+      }
+    ]
+  },
+  {
+    "id": "EV_EXT_ENV_ALERT",
+    "title": "Alerta ambiental abstracta",
+    "description": "Un informe oficial exige mejoras de control.",
+    "phaseMin": 1,
+    "weight": 2,
+    "tags": ["extraction", "environment"],
+    "conditions": { "industryIn": ["extraction"] },
+    "options": [
+      {
+        "key": "compliance",
+        "text": "Mejorar cumplimiento",
+        "effects": { "treasuryDelta": -40, "environmentalDelta": -2, "trustDelta": 1 },
+        "news": "{{leaderName}} anuncia mejoras de cumplimiento ambiental."
+      },
+      {
+        "key": "fine",
+        "text": "Pagar multa y seguir",
+        "effects": { "treasuryDelta": -60, "gdpDelta": 20, "reputationDelta": -1 },
+        "news": "{{leaderName}} paga la multa y mantiene el ritmo."
+      },
+      {
+        "key": "ignore",
+        "text": "Ignorar la alerta",
+        "effects": { "reputationDelta": -2, "corruptionDelta": 1, "stabilityDelta": -1 },
+        "news": "{{leaderName}} decide no modificar protocolos."
+      }
+    ]
+  },
+  {
+    "id": "E28_TOURISM_CAMPAIGN_SUCCESS",
+    "title": "Campana turistica exitosa",
+    "description": "Una campana pega y aparecen reservas. La ciudad sonríe y el trafico tambien.",
+    "phaseMin": 1,
+    "phaseMax": 4,
+    "weight": 2,
+    "tags": ["tourism", "economy"],
+    "conditions": { "statGte": { "reputation": 45 } },
+    "options": [
+      {
+        "key": "scale_services",
+        "text": "Ampliar servicios turisticos",
+        "effects": {
+          "treasuryDelta": -60,
+          "gdpDelta": 60,
+          "reputationDelta": 1,
+          "employmentDelta": 2
+        },
+        "news": "{{leaderName}} impulsa expansion de servicios turisticos."
+      },
+      {
+        "key": "keep_it_small",
+        "text": "Mantenerlo boutique",
+        "effects": {
+          "reputationDelta": 2,
+          "happinessDelta": 1,
+          "gdpDelta": 20,
+          "environmentalDelta": -1
+        },
+        "news": "{{leaderName}} prioriza turismo de calidad y control."
+      }
+    ]
+  },
+  {
+    "id": "E29_OVERTOURISM",
+    "title": "Overtourism",
+    "description": "Demasiada gente, pocos banos. El encanto se vuelve fila.",
+    "phaseMin": 2,
+    "phaseMax": 4,
+    "weight": 2,
+    "tags": ["tourism", "crisis", "society"],
+    "conditions": { "statGte": { "tourismPressure": 60 } },
+    "options": [
+      {
+        "key": "caps",
+        "text": "Cupos y regulacion",
+        "effects": {
+          "reputationDelta": 1,
+          "happinessDelta": 2,
+          "gdpDelta": -30,
+          "environmentalDelta": -1
+        },
+        "news": "{{leaderName}} fija cupos y reglas de visita."
+      },
+      {
+        "key": "expand_capacity",
+        "text": "Invertir para aumentar capacidad",
+        "effects": {
+          "treasuryDelta": -90,
+          "gdpDelta": 30,
+          "stabilityDelta": 1,
+          "environmentalDelta": 1
+        },
+        "news": "{{leaderName}} anuncia inversion para absorber la demanda."
+      },
+      {
+        "key": "do_nothing",
+        "text": "No intervenir",
+        "effects": {
+          "happinessDelta": -3,
+          "stabilityDelta": -2,
+          "reputationDelta": -1,
+          "environmentalDelta": 2
+        },
+        "news": "{{leaderName}} deja que la situacion se autorregule."
+      }
+    ]
+  },
+  {
+    "id": "E30_CRUISE_WAVE",
+    "title": "Ola de cruceros",
+    "description": "Llegan cruceros de golpe. Economia feliz, muelle nervioso.",
+    "phaseMin": 1,
+    "phaseMax": 4,
+    "weight": 2,
+    "tags": ["tourism", "archipelago", "economy"],
+    "conditions": { "geographyIn": ["archipelago"] },
+    "options": [
+      {
+        "key": "dock_fees",
+        "text": "Tasa portuaria + orden",
+        "effects": {
+          "treasuryDelta": 40,
+          "reputationDelta": 1,
+          "environmentalDelta": 1,
+          "happinessDelta": 1
+        },
+        "news": "{{leaderName}} establece tasas y reglas para cruceros."
+      },
+      {
+        "key": "welcome_all",
+        "text": "Recibir sin limites",
+        "effects": {
+          "gdpDelta": 60,
+          "treasuryDelta": 30,
+          "environmentalDelta": 2,
+          "stabilityDelta": -1
+        },
+        "news": "{{leaderName}} abre el puerto sin restricciones."
+      }
+    ]
+  },
+  {
+    "id": "E31_TOURISM_SLUMP",
+    "title": "Temporada baja",
+    "description": "Reservas caen. Los comercios piden un milagro o un plan.",
+    "phaseMin": 1,
+    "phaseMax": 4,
+    "weight": 2,
+    "tags": ["tourism", "economy"],
+    "conditions": { "statLte": { "stability": 45 } },
+    "options": [
+      {
+        "key": "stimulate",
+        "text": "Promociones y eventos",
+        "effects": { "treasuryDelta": -40, "gdpDelta": 20, "happinessDelta": 1 },
+        "news": "{{leaderName}} lanza promociones para reactivar visitas."
+      },
+      {
+        "key": "focus_domestic",
+        "text": "Enfocar turismo interno",
+        "effects": { "gdpDelta": 10, "trustDelta": 1, "inequalityDelta": -1 },
+        "news": "{{leaderName}} impulsa turismo interno con descuentos."
+      }
+    ]
+  },
+  {
+    "id": "E32_REPUTATION_TRAVEL_ADVISORY",
+    "title": "Alerta de viaje",
+    "description": "Un organismo emite una alerta de viaje. Tu reputacion se ve en el espejo internacional.",
+    "phaseMin": 2,
+    "phaseMax": 4,
+    "weight": 2,
+    "tags": ["tourism", "diplomacy", "crisis"],
+    "conditions": { "statLte": { "reputation": 55 } },
+    "options": [
+      {
+        "key": "improve_safety",
+        "text": "Plan rapido de orden y comunicacion",
+        "effects": {
+          "treasuryDelta": -60,
+          "reputationDelta": 2,
+          "stabilityDelta": 1,
+          "trustDelta": 1
+        },
+        "news": "{{leaderName}} anuncia medidas y comunicacion internacional."
+      },
+      {
+        "key": "deny",
+        "text": "Negar y culpar a terceros",
+        "effects": {
+          "reputationDelta": -2,
+          "trustDelta": -2,
+          "stabilityDelta": -1
+        },
+        "news": "{{leaderName}} rechaza la alerta con comunicado extenso."
+      }
+    ]
+  },
+  {
+    "id": "E33_CULTURE_FESTIVAL",
+    "title": "Festival cultural",
+    "description": "Un festival cultural atrae visitantes y orgullo local. Tambien requiere logistica real.",
+    "phaseMin": 1,
+    "phaseMax": 4,
+    "weight": 2,
+    "tags": ["tourism", "society", "economy"],
+    "conditions": {
+      "geographyIn": ["coastal", "mountain", "desert", "forest", "urban"]
+    },
+    "options": [
+      {
+        "key": "fund_it",
+        "text": "Financiar y profesionalizar",
+        "effects": {
+          "treasuryDelta": -50,
+          "gdpDelta": 30,
+          "happinessDelta": 2,
+          "reputationDelta": 1
+        },
+        "news": "{{leaderName}} apoya el festival con financiamiento y orden."
+      },
+      {
+        "key": "sponsor",
+        "text": "Patrocinios privados",
+        "effects": {
+          "gdpDelta": 20,
+          "corruptionDelta": 1,
+          "reputationDelta": 1,
+          "treasuryDelta": -10
+        },
+        "news": "{{leaderName}} habilita patrocinios y acuerdos comerciales."
+      }
+    ]
+  }
+]
